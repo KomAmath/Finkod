@@ -1,0 +1,50 @@
+[
+  {
+    "id": 0,
+    "name": "Number",
+    "literalDescription": "A number",
+    "literalExample": "4",
+    "exampleValue": 4
+  },
+  {
+    "id": 1,
+    "name": "Boolean",
+    "literalDescription": "One of the keywords true or false",
+    "literalExample": "true",
+    "exampleValue": true
+  },
+  {
+    "id": 2,
+    "name": "String",
+    "literalDescription": "A string of characters enclosed in single or double quotation marks",
+    "literalExample": "'Foo'",
+    "exampleValue": "Foo"
+  },
+  {
+    "id": 3,
+    "name": "Array",
+    "literalDescription": "Comma-separated values enclosed in square brackets",
+    "literalExample": "[1, 2, 3]",
+    "exampleValue": [1, 2, 3]
+  },
+  {
+    "id": 4,
+    "name": "Object",
+    "literalDescription": "Comma-separated key-value pairs enclosed in curly braces, where each key-value pair is formatted as <key>:<value>, and each key is a string",
+    "literalExample": "{name: 'Luke', profession: 'Jedi'}",
+    "exampleValue": {"name": "Luke", "profession": "Jedi"}
+  },
+  {
+    "id": 5,
+    "name": "Undefined",
+    "literalDescription": "The string undefined",
+    "literalExample": "undefined"
+  },
+  {
+    "id": 6,
+    "name": "Null",
+    "literalDescription": "The string null",
+    "literalExample": "null",
+    "exampleValue": null
+  }
+]
