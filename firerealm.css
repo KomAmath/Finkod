@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 button:focus {outline:0;} /*tar bort den blåa outlinen 
 						som kommer när man har klickat*/
 
@@ -52,3 +53,59 @@ button:focus {outline:0;} /*tar bort den blåa outlinen
   justify-content: flex-start;
 }
 
+=======
+button:focus {outline:0;} /*tar bort den blåa outlinen 
+						som kommer när man har klickat*/
+
+.fire {
+	background-image: url("fire.jpg");
+	background-color: #fffde0;
+	height:200vw;
+}
+
+
+.lvl {
+    height: 20vw;
+  	width: 20vw;
+  	border-radius: 50%;
+  	font-size: 3vw;
+  	background-color:#ff8d6d;
+}
+
+.lvl:active{
+	background-color: #f46a46;
+
+}
+
+.empty {
+    height: 20vw;
+  	width: 20vw;
+  	border-radius: 50%;
+  	font-size: 3vw;
+  	opacity: 0;
+}
+
+.empty_half {
+    height: 10vw;
+  	width: 10vw;
+  	border-radius: 50%;
+  	font-size: 3vw;
+  	opacity: 0;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container2 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex-container3 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+>>>>>>> 5990fa42ce7a4965b713507cc490e1f4dffc5eeb
