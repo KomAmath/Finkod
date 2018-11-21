@@ -7,6 +7,9 @@
 	height: 20vw;
 	width: 20vw;
 	text-align: center;
+	font-size: 7vw;
+	color:white;
+	opacity: 0.7;
 }
 
 #plus {

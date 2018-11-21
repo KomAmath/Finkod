@@ -1,0 +1,36 @@
+#bru {
+	background-color: red;
+	height: 90vw;
+}
+#uppgift {
+	background-color: white;
+	width: 50vw;
+	height: 15vw;
+	margin-left: 20vw;
+}
+.alternativ {
+	background-color: pink;
+	width : 20vw;
+	height: 15vw;
+	margin-left: 20vw;
+	border: 0.3vw solid black;
+	text-align: center;
+	border-radius: 1vw;
+	font-size: 2vw;
+}
+#alt1{
+	float: left;
+	margin-left: 20vw;
+}
+#alt2{
+	float: right;
+	margin-right: 35vw;
+}
+#alt3{
+	float: left;
+	margin-left: 20vw;
+}
+#alt4{
+	float: right;
+	margin-right: 35vw;
+}
