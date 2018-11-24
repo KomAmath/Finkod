@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './firerealm.css';
+import './waterrealm.css';
 import UppgiftPlus from './uppgiftplus.js';
 
- class FireRealm extends React.Component {
+ class WaterRealm extends React.Component {
    constructor() {
     super();
     this.state = {
@@ -29,7 +29,7 @@ import UppgiftPlus from './uppgiftplus.js';
 
     return(
 
-       <div className="fire">
+       <div className="water">
 
         <div className="flex-container">
         <button type="button" className="lvl"> 9</button>
@@ -81,4 +81,4 @@ import UppgiftPlus from './uppgiftplus.js';
       )
   }
 }
-export default FireRealm;
+export default WaterRealm;

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import types from './types.json';
 import './uppgiftplus.css';
+import FireRealm from './firerealm.js';
+import PopUp from './popup.js';
 
 class UppgiftPlus extends React.Component {
 constructor() {
@@ -12,21 +14,17 @@ constructor() {
   }
   handleClick(input) {
     console.log(input.target.id);
-    /*if (facit == input.target.id) {
-
-    }
-    else*/
-    /*
-		Till lördag/onsdag
-		- kolla om facit == alt[x]
-		- isf -> ruta som säger att du har gjort rätt (m. sensei)
-		- Skickas tillbaka till firerealm
-		- Använda oss av id för att läsa av hidden p taggen för att jämföra rätt eller fel svar. :p
-	*/
     this.setState({
-      selected: input.target.id
+      selected: input.target.id,
+      showPopup: false
     })
   };
+
+  togglePopup() {
+    this.setState({
+      showPopup: !this.state.showPopup
+    });
+  }
 
   Random(maxNumber) {
   	var randomNumber = Math.floor((Math.random() * maxNumber) + 1);
@@ -70,26 +68,34 @@ constructor() {
   	if(svarPlace == 1 ) {alt1 = svar;}
   	else if(svarPlace == 2) {alt2 = svar;}
   	else if(svarPlace == 3) {alt3 = svar;}
-	else {alt4 = svar;}
-	let facit = "alt" + svarPlace;
+  	else {alt4 = svar;}
+  	let facit = "alt" + svarPlace;
   			
   	return (
   		<div id= "bru">
     	<div id ="uppgift"> {term1} + {term2}</div>
-    	<button id= "alt1" className = "alternativ" onClick={this.handleClick}> {alt1} </button>
-    	<div id = "alt2" className = "alternativ"> {alt2}</div>
-    	<div id = "alt3" className = "alternativ"> {alt3}</div>
-    	<div id = "alt4" className = "alternativ"> {alt4}</div>
-    	<p hidden id = "facit" >{facit}</p>
+    	<button id = "alt1" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt1}</button>
+    	<button id = "alt2" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt2}</button>
+    	<button id = "alt3" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt3}</button>
+    	<button id = "alt4" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt4}</button>
+    	<p hidden ref="facit">{facit}</p>
     	</div>
     	);
   }
 
   render() {
+    const test = <FireRealm />;
+    if (this.refs.facit && (this.state.selected === this.refs.facit.textContent)) {
+      return (
+        test
+        ); 
+    }
+
   	
     return (
-    	this.RandomUpg(20)
-    	);
+      this.RandomUpg(20)
+    	
+      );
   }
 }
 

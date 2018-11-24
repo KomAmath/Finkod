@@ -3,9 +3,9 @@ import types from './types.json';
 import './app.css';
 
 import FireRealm from './firerealm.js';
-import Test1 from './test1.js';
-import Test2 from './test2.js';
-import Test3 from './test3.js';
+import WaterRealm from './waterrealm.js';
+import ForestRealm from './forestrealm.js';
+import AirRealm from './airrealm.js';
 import Anka from './anka.js';
 
 
@@ -30,9 +30,9 @@ class TypeApp extends React.Component {
   
   render() {
     const test = <FireRealm />;
-    const test1 = <Test1 />;
-    const test2 = <Test2 />;
-    const test3 = <Test3 />;
+    const test1 = <WaterRealm />;
+    const test2 = <ForestRealm />;
+    const test3 = <AirRealm />;
     const anka = <Anka />;
     if (this.state.selected === "plus") {
       return test;
