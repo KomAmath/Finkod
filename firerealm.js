@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './firerealm.css';
+import './realm.css';
 import UppgiftPlus from './uppgiftplus.js';
+import App from './app.js';
 
  class FireRealm extends React.Component {
    constructor() {
@@ -22,8 +24,15 @@ import UppgiftPlus from './uppgiftplus.js';
  render() {
 
     const uppgiftplus = <UppgiftPlus />;
+    const app = <App />;
     if (this.state.selected === "ett") {
       return uppgiftplus;
+    }
+    if (this.state.selected === "nio") {
+      return uppgiftplus;
+    }
+    if (this.state.selected === "abort") {
+      return app;
     }
 
 
@@ -31,8 +40,10 @@ import UppgiftPlus from './uppgiftplus.js';
 
        <div className="fire">
 
+        <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
+
         <div className="flex-container">
-        <button type="button" className="lvl"> 9</button>
+        <button id='nio' type="button" className="lvl" onClick={this.handleClick}> 9</button>
         <div className="empty_half"></div>       
         </div>
 

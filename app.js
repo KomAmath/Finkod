@@ -69,9 +69,9 @@ class TypeApp extends React.Component {
         </button>
         <button id="minus" className="ruta" onClick={this.handleClick}> - 
         </button>  
-        <button id="mult" className="ruta" onClick={this.handleClick}> * 
+        <button id="mult" className="ruta" onClick={this.handleClick}> x 
         </button> 
-        <button id="division" className="ruta" onClick={this.handleClick}> % 
+        <button id="division" className="ruta" onClick={this.handleClick}> / 
         </button>
 
       </div>

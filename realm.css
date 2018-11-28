@@ -1,0 +1,50 @@
+
+.lvl {
+    height: 20vw;
+    border: 0.5vw solid #575656;
+  	width: 20vw;
+  	border-radius: 50%;
+  	font-size: 2vw;
+    font-family: Moon;
+    color: #575656;
+    font-size:7vw;
+  	background-color:#ff8d6d;
+    transition: width 0.5s;
+
+}
+
+.lvl:active{
+	background-color: #f46a46;
+  width: 25vw;
+}
+
+.empty {
+    height: 20vw;
+  	width: 20vw;
+  	border-radius: 50%;
+  	font-size: 3vw;
+  	opacity: 0;
+}
+
+.empty_half {
+    height: 10vw;
+  	width: 10vw;
+  	border-radius: 50%;
+  	font-size: 3vw;
+  	opacity: 0;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container2 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex-container3 {
+  display: flex;
+  justify-content: flex-start;
+}

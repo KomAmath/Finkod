@@ -1,71 +1,103 @@
-.wrapper {
+body {
 	background-color: #fffde0;
-	height:90vw;
+}
+
+.wrapper {
+	height:300vw;
+	background-color: #fffde0;
+	font-family: Moon;
+}
+
+@font-face {
+  font-family: Moon;
+  src: url(Moon2.0-Bold.otf); /* IE9 Compat Modes */
+  font-weight: 1000;
 }
 
 .ruta {
-	height: 20vw;
-	width: 20vw;
+	border: none;
+	border-radius: 1vw;
+	height: 30vw;
+	width: 30vw;
 	text-align: center;
-	font-size: 7vw;
+	font-size: 17vw;
 	color:white;
 	opacity: 0.7;
 }
 
 #plus {
-	background-color: #ff6459;
 	float: left;
-	margin-left: 20vw;
+	margin-left: 15vw;
 	margin-top: 5vw;
+	background-image: url("eld.png");
+	background-size:cover;
 }
 
 #minus {
-	background-color: #5d8ffc;
 	float: right;
-	margin-right: 20vw;
+	margin-right: 15vw;
 	margin-top: 5vw;
+	background-image: url("vatten.png");
+	background-size:cover;
 }
 
 #mult {
-	background-color: #fff244;
 	float: left;
-	margin-left: 20vw;
+	margin-left: 15vw;
 	margin-top: 5vw;
+	background-image: url("skog.png");
+	background-size:cover;
 }
 
 #division {
-	background-color: #6fd685;
 	float: right;
-	margin-right: 20vw;
+	margin-right: 15vw;
 	margin-top: 5vw;
+	background-image: url("luft.png");
+	background-size:cover;
 }
 
 #welcome {
-	color:black;
+	color:white;
 	opacity: 0.7;
 	font-size: 7vw;
 	text-align: center;
 
 }
-
+#abort {
+	width: 10vw;
+	height: 10vw;
+	float: left;
+	margin-left: 5vw;
+	background-color:#575656;
+	border: none;
+	border-radius: 1vw;
+	color: white;
+	font-family: Moon;
+	font-size: 2vw;
+	margin-top: 5vw;
+	position: fixed;
+}
 #arrowLeft {
 	width: 0; 
 	height: 0; 
 	border-top: 5vw solid transparent;
 	border-bottom: 5vw solid transparent; 
-	border-right:5vw solid blue; 
+	border-right:5vw solid #159ab2; 
 	float: left;
 	margin-top: 6vw;
 }
 
 #bubble {
-	background-color: blue;
+	background-color: #159ab2;
 	float:left;
+	border-radius: 1vw;
+	padding-right: 4vw;
+	padding-left: 2vw;
 }
 
 #header {
 	background-color: #fff244;
-	border: 1vw solid black;
 }
 
 #donald {
@@ -76,6 +108,7 @@
 }
 
 .text {
+	font-family: Moon;
 	color:white;
 	opacity: 0.7;
 	font-size: 7vw;

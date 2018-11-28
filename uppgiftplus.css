@@ -1,22 +1,40 @@
+body {
+	background-image: url("eld.png");
+	background-size:cover;
+
+}
 #bru {
-	background-color: red;
 	height: 90vw;
 }
+
 #uppgift {
-	background-color: white;
-	width: 50vw;
-	height: 15vw;
-	margin-left: 20vw;
+	background-color: #D2706C;
+	border: 0.5vw solid #575656;
+	border-radius: 1vw;
+	font-family: Moon; 
+	color:#575656;
+	text-align : center;
+	padding-top: 2vw;
+	padding-bottom: 2vw;
+	font-size: 9vw;
+	width: 60vw;
+	height: 12vw;
+	margin: auto;
+	margin-top: 5vw;
 }
+
 .alternativ {
-	background-color: pink;
-	width : 20vw;
+	background-color: #F8B479;
+	width : 28vw;
 	height: 15vw;
-	margin-left: 20vw;
-	border: 0.3vw solid black;
+	margin-top: 2vw;
+	color:#575656;
+	border: 0.5vw solid #575656;
 	text-align: center;
 	border-radius: 1vw;
-	font-size: 2vw;
+	font-size: 7vw;
+	font-family: Moon;
+
 }
 #alt1{
 	float: left;
@@ -24,7 +42,7 @@
 }
 #alt2{
 	float: right;
-	margin-right: 35vw;
+	margin-right: 20vw;
 }
 #alt3{
 	float: left;
@@ -32,5 +50,5 @@
 }
 #alt4{
 	float: right;
-	margin-right: 35vw;
+	margin-right: 20vw;
 }

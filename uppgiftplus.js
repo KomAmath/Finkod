@@ -8,9 +8,11 @@ class UppgiftPlus extends React.Component {
 constructor() {
     super();
     this.state = {
-      selected: null
+      selected: null,
+      showPopup: null
     };
     this.handleClick = this.handleClick.bind(this);
+    this.togglePopup = this.togglePopup.bind(this)
   }
   handleClick(input) {
     console.log(input.target.id);
@@ -73,9 +75,10 @@ constructor() {
   			
   	return (
   		<div id= "bru">
+      <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
     	<div id ="uppgift"> {term1} + {term2}</div>
-    	<button id = "alt1" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt1}</button>
-    	<button id = "alt2" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt2}</button>
+    	<button id = "alt1" className = "alternativ" onClick={this.handleClick}>{alt1}</button>
+    	<button id = "alt2" className = "alternativ" onClick={() => { this.handleClick(); this.togglePopup() }}>{alt2}</button>
     	<button id = "alt3" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt3}</button>
     	<button id = "alt4" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt4}</button>
     	<p hidden ref="facit">{facit}</p>
@@ -90,7 +93,9 @@ constructor() {
         test
         ); 
     }
-
+    else if (this.state.selected === "abort") {
+      return (test);
+    }
   	
     return (
       this.RandomUpg(20)

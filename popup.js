@@ -15,6 +15,8 @@ class Popup extends React.Component {
     );
   }
 }
+
+export default Popup;
 /*
 class App extends React.Component {
   constructor() {

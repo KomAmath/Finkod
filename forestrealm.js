@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './forestrealm.css';
+import './realm.css';
 import UppgiftPlus from './uppgiftplus.js';
+import App from './app.js';
 
  class ForestRealm extends React.Component {
    constructor() {
@@ -22,14 +24,20 @@ import UppgiftPlus from './uppgiftplus.js';
  render() {
 
     const uppgiftplus = <UppgiftPlus />;
+    const app = <App />;
+
     if (this.state.selected === "ett") {
       return uppgiftplus;
     }
-
+    if (this.state.selected === "abort") {
+      return app;
+    }
 
     return(
 
        <div className="forest">
+
+        <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
 
         <div className="flex-container">
         <button type="button" className="lvl"> 9</button>
