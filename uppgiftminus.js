@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import types from './types.json';
-import './uppgiftplus.css';
-import FireRealm from './firerealm.js';
+import './uppgiftminus.css';
+import WaterRealm from './waterrealm.js';
 import PopUp from './popup.js';
 
-class UppgiftPlus extends React.Component {
+class UppgiftMinus extends React.Component {
 constructor() {
     super();
     this.state = {
@@ -44,24 +44,25 @@ constructor() {
  	return true;
  }
   RandomUpg(max) {
+
     let svar = 0;
     let term1 = 0;
     let term2 = 0;
     let validate = false;
 
     while(validate == false) {
-        term1 = this.Random(max);
-        term2 = this.Random(max);
-        svar = term1 + term2;
-        if (svar > 0) {
+        term1 = this.Random(max+5);
+        term2 = this.Random(max-5);
+        svar = term1 - term2;
+        if (svar > -1) {
           validate = true;
         }
     }
 
-    let alt1 = this.RandomOp(svar, (max/10 + 5));
-    let alt2 = this.RandomOp(svar, (max/10 + 5));
-    let alt3 = this.RandomOp(svar, (max/10 + 5));
-    let alt4 = this.RandomOp(svar, (max/10 + 5));
+  	let alt1 = this.RandomOp(svar, (max/10 + 5));
+  	let alt2 = this.RandomOp(svar, (max/10 + 5));
+  	let alt3 = this.RandomOp(svar, (max/10 + 5));
+  	let alt4 = this.RandomOp(svar, (max/10 + 5));
 
     while(alt4 < 0)
       alt4 = this.RandomOp(svar, (max/10 + 5));
@@ -81,9 +82,9 @@ constructor() {
   	let facit = "alt" + svarPlace;
   			
   	return (
-  		<div id= "bru">
+  		<div id= "vattenwrap">
       <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
-    	<div id ="uppgift"> {term1} + {term2}</div>
+    	<div id ="uppgift"> {term1} - {term2}</div>
     	<button id = "alt1" className = "alternativ" onClick={this.handleClick}>{alt1}</button>
     	<button id = "alt2" className = "alternativ" onClick={() => { this.handleClick(); this.togglePopup() }}>{alt2}</button>
     	<button id = "alt3" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt3}</button>
@@ -94,7 +95,7 @@ constructor() {
   }
 
   render() {
-    const test = <FireRealm />;
+    const test = <WaterRealm />;
     if (this.refs.facit && (this.state.selected === this.refs.facit.textContent)) {
       return (
         test
@@ -105,16 +106,16 @@ constructor() {
     }
   	
     return (
-      this.RandomUpg(20)
+      this.RandomUpg(30)
     	
       );
   }
 }
 
 
-UppgiftPlus.types = {
+UppgiftMinus.types = {
 	//uppgiftTyp 
 	// Difficulty
 }
 
-export default UppgiftPlus;
+export default UppgiftMinus;

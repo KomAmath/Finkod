@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './waterrealm.css';
 import './realm.css';
-import UppgiftPlus from './uppgiftplus.js';
+import UppgiftMinus from './uppgiftminus.js';
 import App from './app.js';
 
  class WaterRealm extends React.Component {
@@ -23,10 +23,10 @@ import App from './app.js';
 
  render() {
 
-    const uppgiftplus = <UppgiftPlus />;
+    const uppgiftminus = <UppgiftMinus />;
     const app = <App />;
     if (this.state.selected === "ett") {
-      return uppgiftplus;
+      return uppgiftminus;
     }
     if (this.state.selected === "abort") {
       return app;

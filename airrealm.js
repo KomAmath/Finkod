@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './airrealm.css';
 import './realm.css';
-import UppgiftPlus from './uppgiftplus.js';
+import UppgiftDiv from './uppgiftdiv.js';
 import App from './app.js';
 
  class AirRealm extends React.Component {
@@ -23,11 +23,11 @@ import App from './app.js';
 
  render() {
 
-    const uppgiftplus = <UppgiftPlus />;
+    const uppgiftdiv = <UppgiftDiv />;
     const app = <App />;
 
     if (this.state.selected === "ett") {
-      return uppgiftplus;
+      return uppgiftdiv;
     }
     if (this.state.selected === "abort") {
       return app;

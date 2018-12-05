@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import types from './types.json';
-import './uppgiftplus.css';
-import FireRealm from './firerealm.js';
+import './uppgiftmult.css';
+import ForestRealm from './forestrealm.js';
 import PopUp from './popup.js';
 
-class UppgiftPlus extends React.Component {
+class UppgiftMult extends React.Component {
 constructor() {
     super();
     this.state = {
@@ -44,6 +44,7 @@ constructor() {
  	return true;
  }
   RandomUpg(max) {
+
     let svar = 0;
     let term1 = 0;
     let term2 = 0;
@@ -52,7 +53,7 @@ constructor() {
     while(validate == false) {
         term1 = this.Random(max);
         term2 = this.Random(max);
-        svar = term1 + term2;
+        svar = term1 * term2;
         if (svar > 0) {
           validate = true;
         }
@@ -83,7 +84,7 @@ constructor() {
   	return (
   		<div id= "bru">
       <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
-    	<div id ="uppgift"> {term1} + {term2}</div>
+    	<div id ="uppgift"> {term1} x {term2}</div>
     	<button id = "alt1" className = "alternativ" onClick={this.handleClick}>{alt1}</button>
     	<button id = "alt2" className = "alternativ" onClick={() => { this.handleClick(); this.togglePopup() }}>{alt2}</button>
     	<button id = "alt3" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt3}</button>
@@ -94,7 +95,7 @@ constructor() {
   }
 
   render() {
-    const test = <FireRealm />;
+    const test = <ForestRealm />;
     if (this.refs.facit && (this.state.selected === this.refs.facit.textContent)) {
       return (
         test
@@ -105,16 +106,16 @@ constructor() {
     }
   	
     return (
-      this.RandomUpg(20)
+      this.RandomUpg(10)
     	
       );
   }
 }
 
 
-UppgiftPlus.types = {
+UppgiftMult.types = {
 	//uppgiftTyp 
 	// Difficulty
 }
 
-export default UppgiftPlus;
+export default UppgiftMult;
