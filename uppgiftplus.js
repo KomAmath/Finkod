@@ -9,24 +9,33 @@ constructor() {
     super();
     this.state = {
       selected: null,
-      showPopup: null
+      showPopup: false
     };
     this.handleClick = this.handleClick.bind(this);
     this.togglePopup = this.togglePopup.bind(this)
   }
+
   handleClick(input) {
     console.log(input.target.id);
+    //console.log(this.state.showPopup);
+    if (this.refs.facit && (this.state.selected === this.refs.facit.textContent)){
+      this.togglePopup();
+    }
+    //console.log(this.state.showPopup);
     this.setState({
-      selected: input.target.id,
-      showPopup: false
+      selected: input.target.id
+      //showPopup: false
     })
   };
 
   togglePopup() {
     this.setState({
       showPopup: !this.state.showPopup
+      //showPopup: true
     });
   }
+
+
 
   Random(maxNumber) {
   	var randomNumber = Math.floor((Math.random() * maxNumber) + 1);
@@ -79,15 +88,15 @@ constructor() {
   	else if(svarPlace == 3) {alt3 = svar;}
   	else {alt4 = svar;}
   	let facit = "alt" + svarPlace;
-  			
+  			// function(event) med this.handleClick hämtar ej this
   	return (
   		<div id= "bru">
       <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
     	<div id ="uppgift"> {term1} + {term2}</div>
-    	<button id = "alt1" className = "alternativ" onClick={this.handleClick}>{alt1}</button>
-    	<button id = "alt2" className = "alternativ" onClick={() => { this.handleClick(); this.togglePopup() }}>{alt2}</button>
-    	<button id = "alt3" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt3}</button>
-    	<button id = "alt4" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt4}</button>
+    	<button id = "alt1" className = "alternativ" onClick={(event) => {this.handleClick(event);}}>{alt1}</button>
+    	<button id = "alt2" className = "alternativ" onClick={(event) => {this.handleClick(event);}}>{alt2}</button>
+    	<button id = "alt3" className = "alternativ" onClick={(event) => {this.handleClick(event);}}>{alt3}</button>
+    	<button id = "alt4" className = "alternativ" onClick={(event) => {this.handleClick(event);}}>{alt4}</button>
     	<p hidden ref="facit">{facit}</p>
     	</div>
     	);
@@ -95,9 +104,32 @@ constructor() {
 
   render() {
     const test = <FireRealm />;
+    const Retry = <PopUp
+            text= 'Retry'
+            closePopup={this.togglePopup.bind(this)}
+          />
+
     if (this.refs.facit && (this.state.selected === this.refs.facit.textContent)) {
       return (
-        test
+        <div>
+        {this.state.showPopup ? 
+          
+          <PopUp
+            text='Close Me'
+            back={this.togglePopup.bind(this)}
+            closePopup={this.togglePopup.bind(this)}
+          />
+          : null
+        }
+        {
+          console.log(this.state.showPopup)
+        }
+        {
+          
+          this.RandomUpg(20)
+        }
+        </div>
+
         ); 
     }
     else if (this.state.selected === "abort") {
