@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './forestrealm.css';
 import './realm.css';
-import UppgiftMult from './uppgiftmult.js';
+import UppgiftPlus from './uppgiftplus.js';
 import App from './app.js';
 
  class ForestRealm extends React.Component {
@@ -23,11 +23,11 @@ import App from './app.js';
 
  render() {
 
-    const uppgiftmult = <UppgiftMult />;
+    const uppgiftplus = <UppgiftPlus />;
     const app = <App />;
 
     if (this.state.selected === "ett") {
-      return uppgiftmult;
+      return uppgiftplus;
     }
     if (this.state.selected === "abort") {
       return app;

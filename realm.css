@@ -1,49 +1,35 @@
 
-.lvl {
-    height: 20vw;
-    border: 0.5vw solid #575656;
-  	width: 20vw;
-  	border-radius: 50%;
-  	font-size: 2vw;
-    font-family: Moon;
-    color: #575656;
-    font-size:7vw;
-  	background-color:#ff8d6d;
-    transition: width 0.5s;
+/*Om klick*/
 
-}
 
-.lvl:active{
-	background-color: #f46a46;
-  width: 25vw;
-}
-
+/*Tom div för att flytta knapp*/
 .empty {
-    height: 20vw;
-  	width: 20vw;
+    height: 20px;
+  	width: 20px;
   	border-radius: 50%;
-  	font-size: 3vw;
+  	font-size: 3px;
   	opacity: 0;
 }
-
+/*Tom div(/2) för att flytta knapp*/
 .empty_half {
-    height: 10vw;
-  	width: 10vw;
+    height: 10px;
+  	width: 10px;
   	border-radius: 50%;
-  	font-size: 3vw;
+  	font-size: 3px;
   	opacity: 0;
 }
-
+/*Övre rad med div:ar*/
 .flex-container {
   display: flex;
   justify-content: center;
 }
-
+/*Mellan-rad med div:ar*/
 .flex-container2 {
   display: flex;
   justify-content: flex-end;
-}
 
+}
+/*Nedre rad med div:ar, sätt inte margin bottom på den här då storleken på bakgrunden ändras isf*/
 .flex-container3 {
   display: flex;
   justify-content: flex-start;

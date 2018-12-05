@@ -1,75 +1,59 @@
+/*FLYTTA BAKGRUNDSBILDEN FRÅN BODY TILL EN NY CLASS SOM HAR MÅTTEN H: 960PX W: 540PX*/
 body {
-	background-image: url("eld.png");
-	background-size:cover;
-
+	/*background-image: url("eld.png");*/
+	/*background-size:cover;*/ /*DET VAR DENNA JÄVEL SOM SABBADE!!*/
+	 /*height och width gör inte ett skit atm*/
+	 background-color: white;
 }
-#bru {
-	height: 90vw;
+
+/*Innehåller alla stora knappar på sidan (svar och alternativ)*/
+#container {
+	height: 960px;
+	width: 540px;
 }
 
 #uppgift {
 	background-color: #D2706C;
-	border: 0.5vw solid #575656;
-	border-radius: 1vw;
+	border: 5px solid #575656;
+	border-radius: 1px;
 	font-family: Moon; 
 	color:#575656;
 	text-align : center;
-	padding-top: 2vw;
-	padding-bottom: 2vw;
-	font-size: 9vw;
-	width: 60vw;
-	height: 12vw;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-size: 9px;
+	width: 60px;
+	height: 12px;
 	margin: auto;
-	margin-top: 5vw;
+	margin-top: 5px;
 }
 
 .alternativ {
 	background-color: #F8B479;
-	width : 28vw;
-	height: 15vw;
-	margin-top: 2vw;
+	width : 28px;
+	height: 15px;
+	margin-top: 2px;
 	color:#575656;
-	border: 0.5vw solid #575656;
+	border: 0.5px solid #575656;
 	text-align: center;
-	border-radius: 1vw;
-	font-size: 7vw;
+	border-radius: 1px;
+	font-size: 7px;
 	font-family: Moon;
 
 }
 #alt1{
 	float: left;
-	margin-left: 20vw;
+	margin-left: 20px;
 }
 #alt2{
 	float: right;
-	margin-right: 20vw;
+	margin-right: 20px;
 }
 #alt3{
 	float: left;
-	margin-left: 20vw;
+	margin-left: 20px;
 }
 #alt4{
 	float: right;
-	margin-right: 20vw;
-}
-/* POP UP*/
-.popup {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  background-color: rgba(0,0,0, 0.5);
-}
-.popup_inner {
-  position: absolute;
-  left: 25%;
-  right: 25%;
-  top: 25%;
-  bottom: 25%;
-  margin: auto;
-  background: white;
+	margin-right: 20px;
 }
