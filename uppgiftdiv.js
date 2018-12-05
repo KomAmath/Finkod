@@ -76,8 +76,6 @@ constructor() {
       alt1 = this.RandomOp(svar, (max/10 + 5));
 
 
-
-
   	let svarPlace = this.Random(4);
   	if(svarPlace == 1 ) {alt1 = svar;}
   	else if(svarPlace == 2) {alt2 = svar;}
