@@ -40,7 +40,10 @@ button:focus {outline:0;}
 /********* Fire realm CSS *********/
 
 .fire {
+
   background-image: url("eld-1.png");
+
+
   background-size: cover;
 }
 .eldknapp{
