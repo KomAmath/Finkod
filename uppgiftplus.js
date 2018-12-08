@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import types from './types.json';
-import './uppgiftplus.css';
+/*import './uppgiftplus.css';*/
+import './uppgift.css';
 import FireRealm from './firerealm.js';
 import PopUp from './popup.js';
 
@@ -9,12 +10,11 @@ constructor() {
     super();
     this.state = {
       selected: null,
-      showPopup: false
+      showPopup: null
     };
     this.handleClick = this.handleClick.bind(this);
     this.togglePopup = this.togglePopup.bind(this);
   }
-
   handleClick(input) {
       console.log("start");
       console.log(input.target.id);
@@ -38,11 +38,8 @@ constructor() {
   togglePopup() {
     this.setState({
       showPopup: !this.state.showPopup
-      //showPopup: true
     });
   }
-
-
 
   Random(maxNumber) {
   	var randomNumber = Math.floor((Math.random() * maxNumber) + 1);
@@ -88,18 +85,33 @@ constructor() {
   	else if(svarPlace == 3) {alt3 = svar;}
   	else {alt4 = svar;}
   	let facit = "alt" + svarPlace;
-  			// function(event) med this.handleClick hämtar ej this
-  	return (
-  		<div id= "bru">
+  	
+    return (
+      <div id = "bakgrundsbildFire">
+        <div id= "container">
+          <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
+          <div id = "graphicsFireUpg"><div id ="uppgift"> {term1} + {term2}</div></div>
+          <button id = "alt1" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt1}</button>
+          <button id = "alt2" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt2}</button>
+          <button id = "alt3" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt3}</button>
+          <button id = "alt4" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt4}</button>
+          <p hidden ref="facit">{facit}</p>
+        </div>
+      </div>
+      )
+
+
+  	/*return (
+  		<div id= "container">
       <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
     	<div id ="uppgift"> {term1} + {term2}</div>
-    	<button id = "alt1" className = "alternativ" onClick={(event) => {this.handleClick(event);}}>{alt1}</button>
-    	<button id = "alt2" className = "alternativ" onClick={(event) => {this.handleClick(event);}}>{alt2}</button>
-    	<button id = "alt3" className = "alternativ" onClick={(event) => {this.handleClick(event);}}>{alt3}</button>
-    	<button id = "alt4" className = "alternativ" onClick={(event) => {this.handleClick(event);}}>{alt4}</button>
+    	<button id = "alt1" className = "alternativ" onClick={this.handleClick}>{alt1}</button>
+    	<button id = "alt2" className = "alternativ" onClick={this.handleClick}>{alt1}</button>
+    	<button id = "alt3" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt3}</button>
+    	<button id = "alt4" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt4}</button>
     	<p hidden ref="facit">{facit}</p>
     	</div>
-    	);
+    	);*/
   }
 
   render() {

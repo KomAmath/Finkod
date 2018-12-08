@@ -4,7 +4,7 @@ import types from './types.json';
 class Anka extends React.Component {
   render() {
     return (
-    	<img src="https://i.ytimg.com/vi/kzH1iaKVsBM/hqdefault.jpg"/>
+    	<img src="https://blazepress.com/.image/t_share/MTI4OTg3MDI1NTc0NTY2MzY2/adorable-animals-stretching-dog.jpg"/>
     	);
   }
 }

@@ -1,11 +1,17 @@
 body {
-	background-color: #fffde0;
+	/*background-color: #fffde0;*/
+	height:100vw;
+	width: 100vw;
 }
 
 .wrapper {
-	height:300vw;
+	/*Halverad storlek, ändra senare*/
+	height:200vw;
+	width: 100vw;
 	background-color: #fffde0;
 	font-family: Moon;
+	background-image: url("bakgrund_gryning.png");
+	background-size: cover;
 }
 
 @font-face {
@@ -14,102 +20,121 @@ body {
   font-weight: 1000;
 }
 
-.ruta {
+#header {
+	width: 100vw;
+	height: 20vw;
+}
+
+#donald {
+	height: 20vw;
+	float: left;
+	margin-left: 7vw;
+	margin-top: 3vw;
+}
+
+#abort {
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin-left:10px;
+	background-color:#575656;
+	margin-top: 10px;
+	position: fixed;
+	
 	border: none;
-	border-radius: 1vw;
-	height: 30vw;
-	width: 30vw;
-	text-align: center;
-	font-size: 17vw;
+	border-radius: 10px;
+
+	font-family: Moon;
+	font-size: 10px;
+	color: white;
+}
+
+#arrowLeft { 
+	border-top: 2vw solid transparent;
+	border-bottom: 3vw solid transparent; 
+	border-right:5vw solid #159ab2; 
+	float: left;
+	margin-top: 7vw;
+}
+
+#bubble {
+	background-color: #159ab2;
+	float:left;
+	border-radius: 3vw;;
+	padding-right: 6vw;
+	padding-left: 6vw;
+	margin-top: 3vw;
+}
+
+/*välkomstexten, bubblan ändrar storlek enligt hur stor fonten är*/
+#welcome {
 	color:white;
 	opacity: 0.7;
+	font-size: 7vw;
+	text-align: center;
+}
+/*SJUKT OKLAR TEXT. GÖR INGET VID ÄNDRING*/
+.text {
+	font-family: Moon;
+}
+
+/*Div som innehåller alla knappar*/
+#knappar {
+	margin-top: 4vw;
+	margin-right: 2vw;
+	margin-left: 7vw;
+	margin-right: 7vw;
+	width: 95vw;
+	height: 100vw;
+	/*background-color: #159ab2;*/
+}
+
+/*Class för de 4 knapparna*/
+.ruta {
+	border-radius: 3vw;
+	height: 40vw;
+	width: 40vw;
+	text-align: center;
+	font-size: 23vw;
+	color:white;
+	opacity: 0.85;
+	margin-top: 5vw;
+	border-color: white; 
+	border-width: 1vw;
 }
 
 #plus {
 	float: left;
-	margin-left: 15vw;
-	margin-top: 5vw;
+	/*margin-left: 30px;
+	margin-top: 30px;*/
 	background-image: url("eld.png");
 	background-size:cover;
 }
 
 #minus {
 	float: right;
-	margin-right: 15vw;
-	margin-top: 5vw;
+	margin-right: 10vw;
+	/*margin-top: 30px;*/
 	background-image: url("vatten.png");
 	background-size:cover;
 }
 
 #mult {
 	float: left;
-	margin-left: 15vw;
-	margin-top: 5vw;
+	/*margin-left: 30px;
+	margin-top: 30px;*/
 	background-image: url("skog.png");
 	background-size:cover;
 }
 
 #division {
 	float: right;
-	margin-right: 15vw;
-	margin-top: 5vw;
+	margin-right: 10vw;
+	/*margin-top: 30px;*/
 	background-image: url("luft.png");
 	background-size:cover;
 }
 
-#welcome {
-	color:white;
-	opacity: 0.7;
-	font-size: 7vw;
-	text-align: center;
 
-}
-#abort {
-	width: 10vw;
-	height: 10vw;
-	float: left;
-	margin-left: 5vw;
-	background-color:#575656;
-	border: none;
-	border-radius: 1vw;
-	color: white;
-	font-family: Moon;
-	font-size: 2vw;
-	margin-top: 5vw;
-	position: fixed;
-}
-#arrowLeft {
-	width: 0; 
-	height: 0; 
-	border-top: 5vw solid transparent;
-	border-bottom: 5vw solid transparent; 
-	border-right:5vw solid #159ab2; 
-	float: left;
-	margin-top: 6vw;
-}
 
-#bubble {
-	background-color: #159ab2;
-	float:left;
-	border-radius: 1vw;
-	padding-right: 4vw;
-	padding-left: 2vw;
-}
 
-#header {
-	background-color: #fff244;
-}
-
-#donald {
-	height: 20vw;
-	float: left;
-	margin-left: 4vw;
-	margin-top: 1vw;
-}
-
-.text {
-	font-family: Moon;
-	color:white;
-	opacity: 0.7;
-	font-size: 7vw;
-}
