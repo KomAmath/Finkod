@@ -41,7 +41,7 @@ button:focus {outline:0;}
 
 .fire {
   background-image: url("eld.png");
-  background-size:  540px 960px;
+  background-size: cover;
 }
 .eldknapp{
   height: 100px;

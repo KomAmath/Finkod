@@ -1,15 +1,17 @@
 body {
-	background-color: #fffde0;
-	height:960px;
-	width: 540px;
+	/*background-color: #fffde0;*/
+	height:100vw;
+	width: 100vw;
 }
 
 .wrapper {
 	/*Halverad storlek, ändra senare*/
-	height:960px;
-	width: 540px;
+	height:200vw;
+	width: 100vw;
 	background-color: #fffde0;
 	font-family: Moon;
+	background-image: url("bakgrund_gryning.png");
+	background-size: cover;
 }
 
 @font-face {
@@ -19,17 +21,15 @@ body {
 }
 
 #header {
-	background-color: #fffde0;
-	width: 540px;
-	height: 200px;
-	border-bottom: 2px solid black;
+	width: 100vw;
+	height: 20vw;
 }
 
 #donald {
-	height: 175px;
+	height: 20vw;
 	float: left;
-	margin-left: 10px;
-	margin-top: 10px;
+	margin-left: 7vw;
+	margin-top: 3vw;
 }
 
 #abort {
@@ -47,95 +47,90 @@ body {
 	font-family: Moon;
 	font-size: 10px;
 	color: white;
-
 }
 
-#arrowLeft { /*jag hittar inte pilen mvh ceki, eller hör den bara ihop med bubble?*/
-	width: 10px; 
-	height: 10px; 
-	border-top: 10px solid transparent;
-	border-bottom: 10px solid transparent; 
-	border-right:10px solid #159ab2; 
+#arrowLeft { 
+	border-top: 2vw solid transparent;
+	border-bottom: 3vw solid transparent; 
+	border-right:5vw solid #159ab2; 
 	float: left;
-	margin-top: 40px;
+	margin-top: 7vw;
 }
 
 #bubble {
 	background-color: #159ab2;
 	float:left;
-	border-radius: 20px;
-	padding-right: 50px;
-	padding-left: 50px;
-	margin-top: 20px;
+	border-radius: 3vw;;
+	padding-right: 6vw;
+	padding-left: 6vw;
+	margin-top: 3vw;
 }
 
 /*välkomstexten, bubblan ändrar storlek enligt hur stor fonten är*/
 #welcome {
 	color:white;
 	opacity: 0.7;
-	font-size: 40px;
+	font-size: 7vw;
 	text-align: center;
 }
-
+/*SJUKT OKLAR TEXT. GÖR INGET VID ÄNDRING*/
 .text {
 	font-family: Moon;
-	color:white;
-	opacity: 0.7;
-	font-size: 100px;
 }
 
-/*Innehåller alla knappar*/
+/*Div som innehåller alla knappar*/
 #knappar {
-	/*border: 3px solid black;*/
-	margin-top: 20px;
-	margin-right: 20px;
-	margin-left: 20px;
-	width: 500px;
-	height: 500px;
+	margin-top: 4vw;
+	margin-right: 2vw;
+	margin-left: 7vw;
+	margin-right: 7vw;
+	width: 95vw;
+	height: 100vw;
 	/*background-color: #159ab2;*/
 }
 
-/*De 4 knapparna*/
+/*Class för de 4 knapparna*/
 .ruta {
-	border: none;
-	border-radius: 25px;
-	height: 200px;
-	width: 200px;
+	border-radius: 3vw;
+	height: 40vw;
+	width: 40vw;
 	text-align: center;
-	font-size: 100px;
+	font-size: 23vw;
 	color:white;
-	opacity: 0.7;
+	opacity: 0.85;
+	margin-top: 5vw;
+	border-color: white; 
+	border-width: 1vw;
 }
-
 
 #plus {
 	float: left;
-	margin-left: 30px;
-	margin-top: 30px;
+	/*margin-left: 30px;
+	margin-top: 30px;*/
 	background-image: url("eld.png");
 	background-size:cover;
 }
 
 #minus {
 	float: right;
-	margin-right: 30px;
-	margin-top: 30px;
+	margin-right: 10vw;
+	/*margin-top: 30px;*/
 	background-image: url("vatten.png");
 	background-size:cover;
 }
 
 #mult {
 	float: left;
-	margin-left: 30px;
-	margin-top: 30px;
+	/*margin-left: 30px;
+	margin-top: 30px;*/
 	background-image: url("skog.png");
 	background-size:cover;
 }
 
 #division {
 	float: right;
-	margin-right: 30px;
-	margin-top: 30px;
+	margin-right: 10vw;
+	/*margin-top: 30px;*/
 	background-image: url("luft.png");
 	background-size:cover;
 }
