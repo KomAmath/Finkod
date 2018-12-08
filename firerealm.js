@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './firerealm.css';
 import './realm.css';
+
 import UppgiftPlus from './uppgiftplus.js';
 import App from './app.js';
 

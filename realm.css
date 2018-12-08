@@ -1,7 +1,4 @@
 
-/*Om klick*/
-
-
 /*Tom div för att flytta knapp*/
 .empty {
     height: 20px;
@@ -10,7 +7,7 @@
   	font-size: 3px;
   	opacity: 0;
 }
-/*Tom div(/2) för att flytta knapp*/
+/*Tom div för att flytta knapp halvt steg*/
 .empty_half {
     height: 10px;
   	width: 10px;
@@ -33,4 +30,108 @@
 .flex-container3 {
   display: flex;
   justify-content: flex-start;
+}
+
+/******************************************
+LOKALA CSS:ER FÖR OLIKA BANOR
+******************************************/
+button:focus {outline:0;} 
+
+/********* Fire realm CSS *********/
+
+.fire {
+  background-image: url("eld.png");
+  background-size:  540px 960px;
+}
+.eldknapp{
+  height: 100px;
+  width: 100px;
+  background-color: #ff8d6d; /*Knappfärg*/
+
+  font-family: Moon;
+  font-size:50px;
+  color: #575656; /*font-color*/
+
+  border: 2px solid #575656;
+  border-radius: 50%;
+  transition: width 0.5s;
+}
+
+.eldknapp:active{
+  background-color: #f46a46;
+  width: 25px;
+}
+
+/********* Water realm CSS *********/
+.water {
+  background-image: url("vatten.png");
+  background-size:  540px 960px;
+}
+.vattenknapp{
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+
+  font-family: Moon;
+  font-size:50px;
+  color: #575656; /*font-color*/
+
+  border: 2px solid #575656;
+  border-radius: 50%;
+  transition: width 0.5s;
+}
+
+.vattenknapp:active{
+  background-color: #f46a46;
+  width: 25px;
+}
+
+/********* Forest realm CSS *********/
+.forest {
+  background-image: url("skog.png");
+  background-size:  540px 960px;
+}
+
+.skogsknapp{
+  height: 100px;
+  width: 100px;
+  background-color: green;
+
+  font-family: Moon;
+  font-size:50px;
+  color: #575656; /*font-color*/
+
+  border: 2px solid #575656;
+  border-radius: 50%;
+  transition: width 0.5s;
+}
+
+.skogsknapp:active{
+  background-color: #f46a46;
+  width: 25px;
+}
+
+/********* Sky realm CSS *********/
+.air {
+  background-image: url("luft.png");
+  background-size:  540px 960px;
+}
+
+.luftknapp{
+  height: 100px;
+  width: 100px;
+  background-color: white;
+
+  font-family: Moon;
+  font-size:50px;
+  color: #575656; /*font-color*/
+
+  border: 2px solid #575656;
+  border-radius: 50%;
+  transition: width 0.5s;
+}
+
+.luftknapp:active{
+  background-color: #f46a46;
+  width: 25px;
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import types from './types.json';
-import './uppgiftdiv.css';
+import './uppgift.css';
 import AirRealm from './airrealm.js';
 import PopUp from './popup.js';
 
@@ -82,8 +82,22 @@ constructor() {
   	else if(svarPlace == 3) {alt3 = svar;}
   	else {alt4 = svar;}
   	let facit = "alt" + svarPlace;
-  			
-  	return (
+  		
+return (
+      <div id = "bakgrundsbildAir">
+        <div id= "container">
+          <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
+          <div id = "graphicsAirUpg"><div id ="uppgift"> {term1} / {term2}</div></div>
+          <button id = "alt1" className = "graphicsAirAlt" onClick={(event) => {this.handleClick(event);}}>{alt1}</button>
+          <button id = "alt2" className = "graphicsAirAlt" onClick={(event) => {this.handleClick(event);}}>{alt2}</button>
+          <button id = "alt3" className = "graphicsAirAlt" onClick={(event) => {this.handleClick(event);}}>{alt3}</button>
+          <button id = "alt4" className = "graphicsAirAlt" onClick={(event) => {this.handleClick(event);}}>{alt4}</button>
+          <p hidden ref="facit">{facit}</p>
+        </div>
+      </div>
+      )
+
+  	/*return (
   		<div id= "bru">
       <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
     	<div id ="uppgift"> {term1} / {term2}</div>
@@ -93,7 +107,7 @@ constructor() {
     	<button id = "alt4" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt4}</button>
     	<p hidden ref="facit">{facit}</p>
     	</div>
-    	);
+    	);*/
   }
 
   render() {
