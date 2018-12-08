@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import types from './types.json';
-import './uppgiftmult.css';
+import './uppgift.css';
 import ForestRealm from './forestrealm.js';
 import PopUp from './popup.js';
 
@@ -81,7 +81,21 @@ constructor() {
   	else {alt4 = svar;}
   	let facit = "alt" + svarPlace;
   			
-  	return (
+	  return (
+    <div id = "bakgrundsbildForest">
+      <div id= "container">
+        <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
+        <div id = "graphicsForestUpg"><div id ="uppgift"> {term1} x {term2}</div></div>
+        <button id = "alt1" className = "graphicsForestAlt" onClick={(event) => {this.handleClick(event);}}>{alt1}</button>
+        <button id = "alt2" className = "graphicsForestAlt" onClick={(event) => {this.handleClick(event);}}>{alt2}</button>
+        <button id = "alt3" className = "graphicsForestAlt" onClick={(event) => {this.handleClick(event);}}>{alt3}</button>
+        <button id = "alt4" className = "graphicsForestAlt" onClick={(event) => {this.handleClick(event);}}>{alt4}</button>
+        <p hidden ref="facit">{facit}</p>
+      </div>
+    </div>
+    )
+
+    /*return (
   		<div id= "bru">
       <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
     	<div id ="uppgift"> {term1} x {term2}</div>
@@ -91,7 +105,7 @@ constructor() {
     	<button id = "alt4" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt4}</button>
     	<p hidden ref="facit">{facit}</p>
     	</div>
-    	);
+    	);*/
   }
 
   render() {

@@ -61,19 +61,19 @@ class TypeApp extends React.Component {
           <div id="donald" onClick={this.handleClick}/>
           <div id="arrowLeft"></div>
           <div id="bubble">
-            <p id="welcome"> Välkommen hit, skoj </p>
+            <p id="welcome"> Välkommen  </p>
           </div>
         </div>
-
-        <button id="plus" className="ruta" onClick={this.handleClick}> +
-        </button>
-        <button id="minus" className="ruta" onClick={this.handleClick}> - 
-        </button>  
-        <button id="mult" className="ruta" onClick={this.handleClick}> x 
-        </button> 
-        <button id="division" className="ruta" onClick={this.handleClick}> / 
-        </button>
-
+        <div id="knappar">
+          <button id="plus" className="ruta" onClick={this.handleClick}> +
+          </button>
+          <button id="minus" className="ruta" onClick={this.handleClick}> - 
+          </button>  
+          <button id="mult" className="ruta" onClick={this.handleClick}> x 
+          </button> 
+          <button id="division" className="ruta" onClick={this.handleClick}> / 
+          </button>
+        </div>
       </div>
     )
   }

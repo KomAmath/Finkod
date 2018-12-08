@@ -1,9 +1,0 @@
-button:focus {outline:0;} /*tar bort den blåa outlinen 
-						som kommer när man har klickat*/
-
-.air {
-	background-image: url("luft.png");
-  background-size:cover;
-	background-color: #fffde0;
-	height:200vw;
-}

@@ -1,0 +1,162 @@
+/*FLYTTA BAKGRUNDSBILDEN FRÅN BODY TILL EN NY CLASS SOM HAR MÅTTEN H: 960PX W: 540PX*/
+body {
+	/*background-image: url("eld.png");*/
+	/*background-size:cover;*/ /*DET VAR DENNA JÄVEL SOM SABBADE!!*/
+	 /*height och width gör inte ett skit atm*/
+	 background-color: white;
+}
+
+/*Innehåller alla stora knappar på sidan (svar och alternativ)*/
+
+
+#container {
+	height: 960px;
+	width: 540px;
+}
+
+#bakgrundsbildFire{
+	background-image: url("eld-1.png");
+  	background-size:  540px 960px;
+}
+
+#bakgrundsbildWater{
+	background-image: url("Hav-1.png");
+  	background-size:  540px 960px;
+}
+#bakgrundsbildForest{
+	background-image: url("skog-1.png");
+  	background-size:  540px 960px;
+}
+#bakgrundsbildAir{
+		background-image: url("luft-1.png");
+  	background-size:  540px 960px;
+}
+/**************************************
+**ALLMÄN KOD FÖR UPPGIFTS-RUTORNA****
+**************************************/
+#uppgift {
+	
+	border-radius: 1px;
+	font-family: Moon; 
+	color:#575656;
+	text-align : center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-size: 50px;
+	width: 400px;
+	height: 200px;
+	margin: auto;
+}
+
+/**************************************
+**LOKALA FÄRG/BAKGRUNDSINSTÄLLNINGAR***
+**************************************/
+#graphicsFireUpg{
+	background-color: #D2706C;
+	border: 5px solid #575656;
+}
+#graphicsWaterUpg{
+	background-color: #1f7da7;
+	border: 0.5vw solid #575656;
+		color:#575656;
+}
+#graphicsForestUpg{
+	background-color: #104218;
+	border: 0.5vw solid #575656;
+		color:#ffff;
+}
+#graphicsAirUpg{
+background-color: #f37d3f;
+	border: 0.5vw solid #575656;
+		color:#575656;
+}
+
+/**************************************
+**ALLMÄN KOD FÖR ALTERNATIV-RUTORNA****
+**************************************/
+/*.alternativ {
+
+	width : 200px;
+	height: 100px;
+	text-align: center;
+	border-radius: 1px;
+	font-size: 50px;
+	font-family: Moon;
+	margin-top: 50px;
+}*/
+
+/**************************************
+**LOKALA FÄRG/BAKGRUNDSINSTÄLLNINGAR***
+**************************************/
+
+.graphicsFireAlt{
+	background-color: #F8B479;
+	color:#575656;
+	border: 0.5px solid #575656;
+
+	width : 200px;
+	height: 100px;
+	text-align: center;
+	border-radius: 1px;
+	font-size: 50px;
+	font-family: Moon;
+	margin-top: 50px;
+}
+.graphicsWaterAlt{
+	background-color: #6ecced;
+	color:#575656;
+	border: 0.5vw solid #575656;
+
+	width : 28vw;
+	height: 15vw;
+	margin-top: 2vw;
+
+	text-align: center;
+	border-radius: 1vw;
+	font-size: 7vw;
+	font-family: Moon;
+}
+.graphicsForestAlt{
+	background-color: #76c060;
+	color:#575656;
+	border: 0.5vw solid #575656;
+
+	width : 28vw;
+	height: 15vw;
+	margin-top: 2vw;
+	text-align: center;
+	border-radius: 1vw;
+	font-size: 7vw;
+	font-family: Moon;
+}
+.graphicsAirAlt{
+	background-color: #fdc578;
+	color:#575656;
+	border: 0.5vw solid #575656;
+
+	width : 28vw;
+	height: 15vw;
+	margin-top: 2vw;
+	text-align: center;
+	border-radius: 1vw;
+	font-size: 7vw;
+	font-family: Moon;
+}
+
+
+#alt1{
+	float: left;
+	margin-left: 20px;
+}
+#alt2{
+	float: right;
+	margin-right: 20px;
+}
+#alt3{
+	float: left;
+	margin-left: 20px;
+}
+#alt4{
+	float: right;
+	margin-right: 20px;
+}

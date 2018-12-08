@@ -2,8 +2,8 @@ button:focus {outline:0;} /*tar bort den blåa outlinen
 						som kommer när man har klickat*/
 
 .fire {
-	background-image: url("eld.png");
-  background-size:cover;
+	background-image: url("eld-1.png");
+  	background-size:cover;
 	background-color: #fffde0;
 	height:200vw;
 }

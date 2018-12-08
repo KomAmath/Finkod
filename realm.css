@@ -1,50 +1,139 @@
 
-.lvl {
-    height: 20vw;
-    border: 0.5vw solid #575656;
-  	width: 20vw;
-  	border-radius: 50%;
-  	font-size: 2vw;
-    font-family: Moon;
-    color: #575656;
-    font-size:7vw;
-  	background-color:#ff8d6d;
-    transition: width 0.5s;
-
-}
-
-.lvl:active{
-	background-color: #f46a46;
-  width: 25vw;
-}
-
+/*Tom div för att flytta knapp*/
 .empty {
-    height: 20vw;
-  	width: 20vw;
+    height: 20px;
+  	width: 20px;
   	border-radius: 50%;
-  	font-size: 3vw;
+  	font-size: 3px;
   	opacity: 0;
 }
-
+/*Tom div för att flytta knapp halvt steg*/
 .empty_half {
-    height: 10vw;
-  	width: 10vw;
+    height: 10px;
+  	width: 10px;
   	border-radius: 50%;
-  	font-size: 3vw;
+  	font-size: 3px;
   	opacity: 0;
 }
-
+/*Övre rad med div:ar*/
 .flex-container {
   display: flex;
   justify-content: center;
 }
-
+/*Mellan-rad med div:ar*/
 .flex-container2 {
   display: flex;
   justify-content: flex-end;
-}
 
+}
+/*Nedre rad med div:ar, sätt inte margin bottom på den här då storleken på bakgrunden ändras isf*/
 .flex-container3 {
   display: flex;
   justify-content: flex-start;
+}
+
+/******************************************
+LOKALA CSS:ER FÖR OLIKA BANOR
+******************************************/
+button:focus {outline:0;} 
+
+/********* Fire realm CSS *********/
+
+.fire {
+  background-image: url("eld-1.png");
+  background-size: cover;
+}
+.eldknapp{
+  background: transparent;
+  background-image: url("eldlvl.png"); 
+  background-size: 20vw 25vw;
+  background-position: center;
+  display: inline-block;
+  border: none;
+  width: 20vw;
+  border-radius: 10px;
+  height: 25vw;
+  transition: all 0.5s;
+  font-family: Moon;
+  font-size:50px;
+  color: #4f4b4d; /*font-color*/
+  padding-top: 4vw;
+  
+  /*border: 2px solid #575656;
+  border-radius: 50%;
+  transition: width 0.5s;
+*/
+}
+/*
+.eldknapp:active{
+  background-color: #f46a46;
+  width: 25px;
+}
+*/
+
+/********* Water realm CSS *********/
+.water {
+  background-image: url("Hav-1.png");
+  background-size:  540px 960px;
+}
+.vattenknapp{
+  background: transparent;
+  background-image: url("havlevel.png"); 
+  background-size: 20vw 20vw;
+  background-position: center;
+  display: inline-block;
+  border: none;
+  width: 20vw;
+  border-radius: 10px;
+  height: 20vw;
+  transition: all 0.5s;
+  font-family: Moon;
+  font-size:50px;
+  color: #4f4b4d; /*font-color*/
+  
+}
+
+/********* Forest realm CSS *********/
+.forest {
+  background-image: url("skog-1.png");
+  background-size:  540px 960px;
+}
+
+.skogsknapp{
+  background: transparent;
+  background-image: url("skoglevel.png"); 
+  background-size: 22vw 25vw;
+  background-position: center;
+  display: inline-block;
+  border: none;
+  width: 22vw;
+  border-radius: 10px;
+  height: 25vw;
+  transition: all 0.5s;
+  font-family: Moon;
+  font-size:50px;
+  color: #4f4b4d; /*font-color*/
+}
+
+/********* Sky realm CSS *********/
+.air {
+  background-image: url("luft-1.png");
+  background-size:  540px 960px;
+}
+
+.luftknapp{
+  background: transparent;
+  background-image: url("luftlevel.png"); 
+  background-size: 20vw 25vw;
+  background-position: center;
+  display: inline-block;
+  border: none;
+  width: 20vw;
+  border-radius: 10px;
+  height: 25vw;
+  transition: all 0.5s;
+  font-family: Moon;
+  font-size:50px;
+  color: #4f4b4d; /*font-color*/
+  padding-bottom: 6vw;
 }
