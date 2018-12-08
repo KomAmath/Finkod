@@ -58,7 +58,7 @@ class TypeApp extends React.Component {
       <div className="wrapper">
 
         <div id="header">
-          <img id="donald" src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Donald_Duck.svg/220px-Donald_Duck.svg.png" onClick={this.handleClick}/>
+          <div id="donald" onClick={this.handleClick}/>
           <div id="arrowLeft"></div>
           <div id="bubble">
             <p id="welcome"> Välkommen hit, skoj </p>

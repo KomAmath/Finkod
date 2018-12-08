@@ -1,11 +1,14 @@
 body {
-	background-color: #fffde0;
+
 }
 
 .wrapper {
+	margin-top:-1vw;
+	margin-left: -2vw;
 	height:300vw;
-	background-color: #fffde0;
 	font-family: Moon;
+	background-image: url("bakgrund_gryning.png");
+	background-size:cover;
 }
 
 @font-face {
@@ -101,10 +104,15 @@ body {
 }
 
 #donald {
+	background-position: 1vw 1vw;
+	background-image: url('duckeliduck.png');
+	background-size: 15vw;
 	height: 20vw;
+	width: 20vw;
 	float: left;
 	margin-left: 4vw;
 	margin-top: 1vw;
+	background-repeat: no-repeat;
 }
 
 .text {
