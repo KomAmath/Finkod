@@ -11,35 +11,51 @@ constructor() {
     super();
     this.state = {
       selected: null,
-      showPopup: null
+      showPopup: null,
+      triesCounter: 0,
+      rightsCounter: 0,
+      hasError: false
     };
     this.handleClick = this.handleClick.bind(this);
     this.togglePopup = this.togglePopup.bind(this);
   }
   handleClick(input) {
-      console.log("start");
-      console.log(input.target.id);
-      console.log(this.state.showPopup);
-      if(this.refs.facit) {
-          console.log(this.state.selected);
-          console.log(this.refs.facit.textContent);
-      }
-      //if (this.refs.facit && (this.state.selected === this.refs.facit.textContent)) {
-        console.log("toggle");
-       this.togglePopup();
-     //}
-      console.log(this.state.showPopup);
-      //console.log(this.state.showPopup);
       this.setState({
         selected: input.target.id
         //showPopup: false
       })
+      //if (this.refs.facit && (this.state.selected === this.refs.facit.textContent)) {
+        this.togglePopup();
+        this.triesCounterIncrement();
+        if (this.refs.facit && (input.target.id === this.refs.facit.textContent)) {
+          this.rightsCounterIncrement();
+        }
+     //}
+      //console.log(this.state.showPopup);
   };
 
   togglePopup() {
     this.setState({
       showPopup: !this.state.showPopup
     });
+  }
+
+  triesCounterIncrement() {
+      this.setState({
+        triesCounter: this.state.triesCounter + 1
+      })
+  }
+
+  rightsCounterIncrement() {
+    console.log(this.refs.facit.textContent)
+    console.log(this.refs.facit.textContent)
+    console.log(this.state.selected)
+
+    //if(this.refs.facit && (this.state.selected === this.refs.facit.textContent)){
+      this.setState({
+        rightsCounter: this.state.rightsCounter + 1
+      })
+    //}
   }
 
   Random(maxNumber) {
@@ -112,14 +128,44 @@ constructor() {
   }
 
   render() {
+
+
+
     const test = <FireRealm />;
-    console.log(this.state.showPopup)
+    if(this.state.triesCounter === 6) {
+      return (test)
+    }
+    
+    if (this.state.triesCounter === 5) {
+      return (
+        <div>
+        {      
+          console.log(this.state.triesCounter)
+        }
+        { 
+          <PopUp
+            text={'Resultat: ' + this.state.rightsCounter + ' av ' + this.state.triesCounter}
+            back={this.togglePopup}
+            closePopup={this.handleClick}
+          />
+         
+
+        }
+        {
+          this.RandomUpg(20)
+        }
+        </div>
+        )
+    }
+    {      
+      console.log(this.state.triesCounter)
+    }
+    {      
+      console.log(this.state.rightsCounter)
+    }
     if (this.refs.facit && (this.state.selected === this.refs.facit.textContent)) {
       return (
         <div>
-        {
-          console.log(this.state.showPopup)
-        }
         {this.state.showPopup ? 
           <PopUp
             text='Rätt svar, bra jobbat!'
@@ -130,16 +176,6 @@ constructor() {
 
         }
         {
-          console.log(this.state.showPopup)
-        }
-        {
-          console.log(this.state.selected)
-        }
-        {
-          console.log(this.refs.facit.textContent)
-        }
-        {
-          
           this.RandomUpg(20)
         }
         </div>
