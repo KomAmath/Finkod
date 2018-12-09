@@ -55,6 +55,8 @@ button:focus {outline:0;}
   width: 15vw;
   height: 19.7vw;
   border-radius: 10px;
+
+
   transition: all 0.5s;
   font-family: Moon;
   font-size:50px;
@@ -62,11 +64,6 @@ button:focus {outline:0;}
   padding-top: 11vw;
 }
 
-/*.eldknapp:active{
-  background-color: #f46a46;
-  width: 25px;
-}
-*/
 /********* Water realm CSS *********/
 .water {
   background-image: url("Hav-1.png");
@@ -76,6 +73,7 @@ button:focus {outline:0;}
   background: transparent;
   background-image: url("havlevel.png"); 
   background-size: 20vw 19.7vw;
+
   background-position: center;
   display: inline-block;
   border: none;
@@ -89,15 +87,11 @@ button:focus {outline:0;}
   
 }
 
-/*.vattenknapp:active{
-  background-color: #f46a46;
-  width: 25px;
-}*/
-
 /********* Forest realm CSS *********/
 .forest {
   background-image: url("skog-1.png");
   background-size:  100vw;
+
 }
 
 .skogsknapp{
@@ -110,18 +104,13 @@ button:focus {outline:0;}
   width: 18vw;
   border-radius: 10px;
   height: 19.7vw;
+
   transition: all 0.5s;
   font-family: Moon;
   font-size:50px;
   color: #4f4b4d; /*font-color*/
 }
 
-
-/*.skogsknapp:active{
-  background-color: #f46a46;
-  width: 25px;
-}
-*/
 /********* Sky realm CSS *********/
 .air {
   background-image: url("luft-1.png");
@@ -145,7 +134,3 @@ button:focus {outline:0;}
   padding-bottom: 6vw;
 }
 
-/*.luftknapp:active{
-  background-color: #f46a46;
-  width: 25px;
-}*/

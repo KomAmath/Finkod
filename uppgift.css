@@ -15,20 +15,20 @@ body {
 }
 
 #bakgrundsbildFire{
-	background-image: url("eld.png");
+	background-image: url("eld-1.png");
   	background-size:  540px 960px;
 }
 
 #bakgrundsbildWater{
-	background-image: url("vatten.png");
+	background-image: url("Hav-1.png");
   	background-size:  540px 960px;
 }
 #bakgrundsbildForest{
-	background-image: url("skog.png");
+	background-image: url("skog-1.png");
   	background-size:  540px 960px;
 }
 #bakgrundsbildAir{
-		background-image: url("luft.png");
+		background-image: url("luft-1.png");
   	background-size:  540px 960px;
 }
 /**************************************

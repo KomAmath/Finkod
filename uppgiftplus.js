@@ -13,14 +13,26 @@ constructor() {
       showPopup: null
     };
     this.handleClick = this.handleClick.bind(this);
-    this.togglePopup = this.togglePopup.bind(this)
+    this.togglePopup = this.togglePopup.bind(this);
   }
   handleClick(input) {
-    console.log(input.target.id);
-    this.setState({
-      selected: input.target.id,
-      showPopup: false
-    })
+      console.log("start");
+      console.log(input.target.id);
+      console.log(this.state.showPopup);
+      if(this.refs.facit) {
+          console.log(this.state.selected);
+          console.log(this.refs.facit.textContent);
+      }
+      //if (this.refs.facit && (this.state.selected === this.refs.facit.textContent)) {
+        console.log("toggle");
+       this.togglePopup();
+     //}
+      console.log(this.state.showPopup);
+      //console.log(this.state.showPopup);
+      this.setState({
+        selected: input.target.id
+        //showPopup: false
+      })
   };
 
   togglePopup() {
@@ -104,18 +116,60 @@ constructor() {
 
   render() {
     const test = <FireRealm />;
+    console.log(this.state.showPopup)
     if (this.refs.facit && (this.state.selected === this.refs.facit.textContent)) {
       return (
-        test
-        ); 
-    }
+        <div>
+        {
+          console.log(this.state.showPopup)
+        }
+        {this.state.showPopup ? 
+          <PopUp
+            text='Öj det där är ju typ rätt'
+            back={this.togglePopup}
+            closePopup={this.togglePopup}
+          />
+          : null
+
+        }
+        {
+          console.log(this.state.showPopup)
+        }
+        {
+          console.log(this.state.selected)
+        }
+        {
+          console.log(this.refs.facit.textContent)
+        }
+        {
+          
+          this.RandomUpg(20)
+        }
+        </div>
+        );
+      }
     else if (this.state.selected === "abort") {
       return (test);
     }
-  	
+    else if (this.refs.facit && ((this.state.selected !== this.refs.facit.textContent))){
+        return(
+        <div>
+       {this.state.showPopup ? 
+          <PopUp
+            text='Du har fel'
+            back={this.togglePopup}
+            closePopup={this.togglePopup}
+          /> : null
+        }
+        {
+          
+          this.RandomUpg(20)
+        }
+      </div>
+        ); 
+    }
     return (
       this.RandomUpg(20)
-    	
       );
   }
 }
@@ -127,3 +181,23 @@ UppgiftPlus.types = {
 }
 
 export default UppgiftPlus;
+
+/*
+
+  handleClick(input) {
+    console.log(input.target.id);
+    console.log(this.state.showPopup);
+    if (this.refs.facit && (this.state.selected === this.refs.facit.textContent)){
+      this.setState({
+      showPopup: !this.state.showPopup
+      });
+    }
+    console.log(this.state.showPopup);
+    //console.log(this.state.showPopup);
+    this.setState({
+      selected: input.target.id
+      //showPopup: false
+    })
+  };
+
+  */
