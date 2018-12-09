@@ -107,7 +107,7 @@ body {
 	float: left;
 	/*margin-left: 30px;
 	margin-top: 30px;*/
-	background-image: url("eld.png");
+	background-image: url("eld-1.png");
 	background-size:cover;
 }
 
@@ -115,7 +115,7 @@ body {
 	float: right;
 	margin-right: 10vw;
 	/*margin-top: 30px;*/
-	background-image: url("vatten.png");
+	background-image: url("Hav-1.png");
 	background-size:cover;
 }
 
@@ -123,7 +123,7 @@ body {
 	float: left;
 	/*margin-left: 30px;
 	margin-top: 30px;*/
-	background-image: url("skog.png");
+	background-image: url("skog-1.png");
 	background-size:cover;
 }
 
@@ -131,10 +131,20 @@ body {
 	float: right;
 	margin-right: 10vw;
 	/*margin-top: 30px;*/
-	background-image: url("luft.png");
+	background-image: url("luft-1.png");
 	background-size:cover;
 }
 
-
+#donald {
+	background-position: 1vw 1vw;
+	background-image: url('duckeliduck.png');
+	background-size: 15vw;
+	height: 20vw;
+	width: 20vw;
+	float: left;
+	margin-left: 4vw;
+	margin-top: 5vw;
+	background-repeat: no-repeat;
+}
 
 
