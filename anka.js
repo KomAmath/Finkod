@@ -30,7 +30,7 @@ class Anka extends React.Component {
     	<div id="header2">
     	<button id = "abort" onClick={this.handleClick}> Tillbaka </button>
     	<div id="helpMe">
-    			<div id="rubrik"> HJÄLP MEJ </div>
+    			<div id="rubrik"> HJÄLP MIG! </div>
     			<p> Hejsan trogne krigare! <br />
     				Jag är matte-Ankan och jag är din nya kompanjon i det spännande landet Mattelandia! <br />
 					Det här landet består av 4 mycket speciella platser; <br />

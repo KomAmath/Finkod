@@ -50,12 +50,12 @@ button:focus {outline:0;}
 
 .eldknapp{
   background: transparent;
-  background-image: url("eldlvl.png"); 
-  background-size: 20vw 25vw;
+  background-image: url("EldknappV1-01.png"); 
+  background-size: 30vw 25vw;
   background-position: center;
   display: inline-block;
   border: none;
-  width: 20vw;
+  width: 30vw;
   height: 25vw;
   border-radius: 3vw;
   font-family: Moon;
@@ -109,14 +109,14 @@ button:focus {outline:0;}
 
 .skogsknapp{
   background: transparent;
-  background-image: url("skoglevel.png"); 
-  background-size: 21vw 23vw;
+  background-image: url("skogknappV1-01.png"); 
+  background-size: 22vw 27vw;
   background-position: center;
   display: inline-block;
   border: none;
-  width: 21vw;
+  width: 22vw;
   border-radius: 3vw;
-  height: 23vw;
+  height: 27vw;
   font-family: Moon;
   font-size: 10vw;
   color: #4f4b4d; /*font-color*/
@@ -137,14 +137,14 @@ button:focus {outline:0;}
 
 .luftknapp{
   background: transparent;
-  background-image: url("luftlevel.png"); 
-  background-size: 20vw 25vw;
+  background-image: url("luftknappV1-01.png"); 
+  background-size: 22vw 26vw;
   background-position: center;
   display: inline-block;
   border: none;
-  width: 20vw;
+  width: 22vw;
   border-radius: 3vw;
-  height: 25vw;
+  height: 26vw;
   font-family: Moon;
   font-size:10vw;
   color: #4f4b4d; /*font-color*/
