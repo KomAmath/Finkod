@@ -11,19 +11,23 @@
   background-color: rgba(0,0,0, 0.5);
 }
 .popup_inner {
-  position: absolute;
-  left: 32%;
-  right: 32%;
-  top: 40%;
-  bottom: 40%;
+  position: fixed;
+  width: 35vw;
+  height: 20vw;
   margin: auto;
+  margin-top: 50vw;
+  margin-left: 30vw;
   background: white;
   text-align: center;
+  font-size: 2vw;
   /*fire*/
   background-color: #96B275;
   font-family: Moon;
   border: 1vw solid #575656;
   border-radius: 3vw;
+  padding-bottom: 3vw;
+  padding-right: 2vw;
+  padding-left: 2vw;
 }
 
 #next {
@@ -32,8 +36,10 @@
   width: 10vw;
   height: 5vw;
   font-size: 3vw;
+  margin-right: 0.1vw;
   border: none;
   border-radius: 2vw;
+  padding-bottom: 3vw;
 }
 
 #duck {
@@ -45,4 +51,6 @@
   float: left;
   margin-top: 2vw;
   background-repeat: no-repeat;
+  padding-top: 3vw;
+
 }

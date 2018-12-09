@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import types from './types.json';
+import React from 'react';
 import './app.css';
 
 import FireRealm from './firerealm.js';

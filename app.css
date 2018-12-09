@@ -1,8 +1,6 @@
 body {
-
 	height:100vw;
 	width: 100vw;
-
 }
 
 .wrapper {
@@ -152,5 +150,50 @@ body {
 	margin-top: 2vw;
 	background-repeat: no-repeat;
 }
+/* ANKA SIDA*/
+#duckis {
+	background-position: 1vw 1vw;
+	background-image: url('duckeliduck.png');
+	background-size: 40vw;
+	height: 50vw;
+	width: 60vw;
+	float: left;
+	margin-top: 0vw;
+	background-repeat: no-repeat;
+}
 
+.wrapper2 {
+	/*Halverad storlek, ändra senare*/
+	height:180vw;
+	background-color: #fffde0;
+	font-family: Moon;
+	background-image: url("bakgrund_gryning.png");
+	background-size: cover;
+}
+#header2 {
+	width: 100vw;
+	height: 25vw;
+}
+#rubrik {
+	font-size: 7vw;
+}
+#helpMe {
+	background-color: white;
+	opacity: 0.8;
+	float: right;
+	border-radius: 3vw;;
+	padding-right: 6vw;
+	padding-left: 6vw;
+	margin-top: 18vw;
+}
 
+#arrowDown {
+	width: 0; 
+  	height: 0; 
+	border-right: 3vw solid transparent; 
+	border-left: 3vw solid transparent; 
+	border-top:5vw solid #ffffff;
+	opacity: 0.8;
+	float: right;
+	margin-right: 60vw;
+}

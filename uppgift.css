@@ -47,7 +47,7 @@ body {
 **ALLMÄN KOD FÖR UPPGIFTS-RUTORNA****
 **************************************/
 #uppgift {
-	margin-top: 10vw;
+	margin-top: 4vw;
 	
 }
 
@@ -71,10 +71,11 @@ border-radius: 3vw;
 	font-family: Moon; 
 	text-align : center;
 	padding-bottom: 5vw;
-	font-size: 15vw;
+	font-size: 10vw;
 	width: 70vw;
 	height: 30vw;
 	margin: auto;
+	margin-bottom: 5vw;
 	color:#575656;
 	background-color: #D2706C;
 	border: 1vw solid #575656;
@@ -85,11 +86,12 @@ border-radius: 3vw;
 	font-family: Moon; 
 	text-align : center;
 	padding-bottom: 5vw;
-	font-size: 15vw;
+	font-size: 10vw;
 	width: 70vw;
 	height: 30vw;
 	margin: auto;
-	background-color: #1f7da7;
+	margin-bottom: 5vw;
+	background-color: #57a3c6;
 	border: 1vw solid #575656;
 	color:#575656;
 }
@@ -98,10 +100,11 @@ border-radius: 3vw;
 	font-family: Moon; 
 	text-align : center;
 	padding-bottom: 5vw;
-	font-size: 15vw;
+	font-size: 10vw;
 	width: 70vw;
 	height: 30vw;
 	margin: auto;
+	margin-bottom: 5vw;
 	background-color: #379650;
 	border: 1vw solid #575656;
 	color:#575656;
@@ -111,10 +114,11 @@ border-radius: 3vw;
 	font-family: Moon; 
 	text-align : center;
 	padding-bottom: 5vw;
-	font-size: 15vw;
+	font-size: 10vw;
 	width: 70vw;
 	height: 30vw;
 	margin: auto;
+	margin-bottom: 5vw;
 	background-color: #f37d3f;
 	border: 1vw solid #575656;
 	color:#575656;
@@ -148,14 +152,14 @@ border-radius: 3vw;
 	border-radius: 3vw;
 	font-size: 10vw;
 	font-family: Moon;
-	margin-top: 15vw;
+	margin-top: 10vw;
 
 }
 .graphicsFireAlt:active {
-  opacity: 0.8;
+ 	background-color:#FBD079;
 }
 .graphicsWaterAlt{
-	background-color: #6ecced;
+	background-color: #9DCDCB;
 	color:#575656;
 	border: 1vw solid #575656;
 	width : 35vw;
@@ -164,11 +168,11 @@ border-radius: 3vw;
 	border-radius: 3vw;
 	font-size: 10vw;
 	font-family: Moon;
-	margin-top: 15vw;
+	margin-top: 10vw;
 }
 
 .graphicsWaterAlt:active {
-  opacity: 0.8;
+  	background-color:#b1e0de;
 }
 
 .graphicsForestAlt{
@@ -182,10 +186,10 @@ border-radius: 3vw;
 	border-radius: 3vw;
 	font-size: 10vw;
 	font-family: Moon;
-	margin-top: 15vw;
+	margin-top: 10vw;
 }
 .graphicsForestAlt:active {
-  opacity: 0.8;
+  	background-color:#99d686;
 }
 
 .graphicsAirAlt{
@@ -198,11 +202,12 @@ border-radius: 3vw;
 	border-radius: 3vw;
 	font-size: 10vw;
 	font-family: Moon;
-	margin-top: 15vw;
+	margin-top: 10vw;
+	padding-top: -2vw;
 }
 
 .graphicsAirAlt:active {
-  opacity: 0.8;
+  	background-color:#FBE27A;
 }
 
 #alt1{

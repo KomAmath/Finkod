@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import types from './types.json';
+import React from 'react';
 import './uppgift.css';
 import ForestRealm from './forestrealm.js';
 import PopUp from './popup.js';
@@ -9,35 +8,49 @@ constructor() {
     super();
     this.state = {
       selected: null,
-      showPopup: null
+      showPopup: null,
+      triesCounter: 0,
+      rightsCounter:0
     };
     this.handleClick = this.handleClick.bind(this);
     this.togglePopup = this.togglePopup.bind(this);
   }
   handleClick(input) {
-      console.log("start");
-      console.log(input.target.id);
-      console.log(this.state.showPopup);
-      if(this.refs.facit) {
-          console.log(this.state.selected);
-          console.log(this.refs.facit.textContent);
-      }
       //if (this.refs.facit && (this.state.selected === this.refs.facit.textContent)) {
-        console.log("toggle");
        this.togglePopup();
+        this.triesCounterIncrement();
+        if (this.refs.facit && (input.target.id === this.refs.facit.textContent)) {
+          this.rightsCounterIncrement();
+        }
      //}
-      console.log(this.state.showPopup);
+     //}
       //console.log(this.state.showPopup);
       this.setState({
         selected: input.target.id
         //showPopup: false
       })
+
   };
 
   togglePopup() {
     this.setState({
       showPopup: !this.state.showPopup
     });
+  }
+
+  triesCounterIncrement() {
+      this.setState({
+        triesCounter: this.state.triesCounter + 1
+      })
+  }
+
+  rightsCounterIncrement() {
+
+    //if(this.refs.facit && (this.state.selected === this.refs.facit.textContent)){
+      this.setState({
+        rightsCounter: this.state.rightsCounter + 1
+      })
+    //}
   }
 
   Random(maxNumber) {
@@ -97,7 +110,7 @@ constructor() {
     <div id = "bakgrundsbildForest">
       <div id= "container">
         <button id = "abort" onClick={this.handleClick}> Tillbaka </button>
-        <div id = "graphicsForestUpg"><div id ="uppgift"> {term1} x {term2}</div></div>
+        <div id = "graphicsForestUpg"><div id ="uppgift"> Vad är <br/>{term1} x {term2} ?</div></div>
         <button id = "alt1" ref = "alt1" className = "graphicsForestAlt" onClick={(event) => {this.handleClick(event);}}>{alt1}</button>
         <button id = "alt2" ref = "alt2" className = "graphicsForestAlt" onClick={(event) => {this.handleClick(event);}}>{alt2}</button>
         <button id = "alt3" ref = "alt3" className = "graphicsForestAlt" onClick={(event) => {this.handleClick(event);}}>{alt3}</button>
@@ -111,6 +124,33 @@ constructor() {
 
 render() {
     const test = <ForestRealm />;
+
+    if(this.state.triesCounter === 6) {
+      return (test)
+    }
+    
+    if (this.state.triesCounter === 5) {
+      return (
+        <div>
+        {      
+          console.log(this.state.triesCounter)
+        }
+        { 
+          <PopUp
+            text={'Bra jobbat! Resultat: ' + this.state.rightsCounter + ' av ' + this.state.triesCounter}
+            back={this.togglePopup}
+            closePopup={this.handleClick}
+          />
+         
+
+        }
+        {
+          this.RandomUpg(12)
+        }
+        </div>
+        )
+    }
+
     console.log(this.state.showPopup)
     if (this.refs.facit && (this.state.selected === this.refs.facit.textContent)) {
       return (
@@ -138,7 +178,7 @@ render() {
         }
         {
           
-          this.RandomUpg(15)
+          this.RandomUpg(12)
         }
         </div>
         );
@@ -168,13 +208,13 @@ render() {
         }
         {
           
-          this.RandomUpg(15)
+          this.RandomUpg(12)
         }
       </div>
         ); 
     }
     return (
-      this.RandomUpg(15)
+      this.RandomUpg(12)
       );
   }
 }

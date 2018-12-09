@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import types from './types.json';
+import React from 'react';
 import './uppgift.css';
 import AirRealm from './airrealm.js';
 import PopUp from './popup.js';
@@ -11,24 +10,22 @@ constructor() {
     super();
     this.state = {
       selected: null,
-      showPopup: null
+      showPopup: null,
+      triesCounter: 0,
+      rightsCounter: 0
     };
     this.handleClick = this.handleClick.bind(this);
     this.togglePopup = this.togglePopup.bind(this);
   }
   handleClick(input) {
-      console.log("start");
-      console.log(input.target.id);
-      console.log(this.state.showPopup);
-      if(this.refs.facit) {
-          console.log(this.state.selected);
-          console.log(this.refs.facit.textContent);
-      }
       //if (this.refs.facit && (this.state.selected === this.refs.facit.textContent)) {
-        console.log("toggle");
        this.togglePopup();
+        this.triesCounterIncrement();
+        if (this.refs.facit && (input.target.id === this.refs.facit.textContent)) {
+          this.rightsCounterIncrement();
+        }
      //}
-      console.log(this.state.showPopup);
+     //}
       //console.log(this.state.showPopup);
       this.setState({
         selected: input.target.id
@@ -40,6 +37,21 @@ constructor() {
     this.setState({
       showPopup: !this.state.showPopup
     });
+  }
+
+  triesCounterIncrement() {
+      this.setState({
+        triesCounter: this.state.triesCounter + 1
+      })
+  }
+
+  rightsCounterIncrement() {
+
+    //if(this.refs.facit && (this.state.selected === this.refs.facit.textContent)){
+      this.setState({
+        rightsCounter: this.state.rightsCounter + 1
+      })
+    //}
   }
 
   Random(maxNumber) {
@@ -101,7 +113,7 @@ return (
       <div id = "bakgrundsbildAir">
         <div id= "container">
           <button id = "abort" onClick={this.handleClick}> Tillbaka </button>
-          <div id = "graphicsAirUpg"><div id ="uppgift"> {term1} / {term2}</div></div>
+          <div id = "graphicsAirUpg"><div id ="uppgift"> Vad är <br /> {term1} / {term2} ? </div></div>
           <button id = "alt1" ref = "alt1" className = "graphicsAirAlt" onClick={(event) => {this.handleClick(event);}}>{alt1}</button>
           <button id = "alt2" ref = "alt2" className = "graphicsAirAlt" onClick={(event) => {this.handleClick(event);}}>{alt2}</button>
           <button id = "alt3" ref = "alt3" className = "graphicsAirAlt" onClick={(event) => {this.handleClick(event);}}>{alt3}</button>
@@ -110,22 +122,37 @@ return (
         </div>
       </div>
       )
-
-  	/*return (
-  		<div id= "bru">
-      <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
-    	<div id ="uppgift"> {term1} / {term2}</div>
-    	<button id = "alt1" className = "alternativ" onClick={this.handleClick}>{alt1}</button>
-    	<button id = "alt2" className = "alternativ" onClick={() => { this.handleClick(); this.togglePopup() }}>{alt2}</button>
-    	<button id = "alt3" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt3}</button>
-    	<button id = "alt4" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt4}</button>
-    	<p hidden ref="facit">{facit}</p>
-    	</div>
-    	);*/
   }
 
    render() {
     const test = <AirRealm />;
+
+    if(this.state.triesCounter === 6) {
+      return (test)
+    }
+    
+    if (this.state.triesCounter === 5) {
+      return (
+        <div>
+        {      
+          console.log(this.state.triesCounter)
+        }
+        { 
+          <PopUp
+            text={'Bra jobbat! Resultat: ' + this.state.rightsCounter + ' av ' + this.state.triesCounter}
+            back={this.togglePopup}
+            closePopup={this.handleClick}
+          />
+         
+
+        }
+        {
+          this.RandomUpg(20)
+        }
+        </div>
+        )
+    }
+
     console.log(this.state.showPopup)
     if (this.refs.facit && (this.state.selected === this.refs.facit.textContent)) {
       return (

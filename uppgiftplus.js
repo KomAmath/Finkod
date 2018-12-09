@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import types from './types.json';
+import React from 'react';
 /*import './uppgiftplus.css';*/
 import './uppgift.css';
 import './popup.css';
@@ -13,8 +12,7 @@ constructor() {
       selected: null,
       showPopup: null,
       triesCounter: 0,
-      rightsCounter: 0,
-      hasError: false
+      rightsCounter: 0
     };
     this.handleClick = this.handleClick.bind(this);
     this.togglePopup = this.togglePopup.bind(this);
@@ -114,7 +112,7 @@ constructor() {
       <div id= "container">
         <div id = "bakgrundsbildFire">
           <button id = "abort" onClick={this.handleClick}> Tillbaka </button>
-          <div id = "graphicsFireUpg"><div id = "uppgift"> {term1} + {term2}</div></div>
+          <div id = "graphicsFireUpg"><div id = "uppgift"> Vad är <br/>{term1} + {term2} ? </div></div>
           <button id = "alt1" ref="alt1" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt1}</button>
           <button id = "alt2" ref="alt2" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt2}</button>
           <button id = "alt3" ref="alt3" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt3}</button>
@@ -144,7 +142,7 @@ constructor() {
         }
         { 
           <PopUp
-            text={'Resultat: ' + this.state.rightsCounter + ' av ' + this.state.triesCounter}
+            text={'Bra jobbat! Resultat: ' + this.state.rightsCounter + ' av ' + this.state.triesCounter}
             back={this.togglePopup}
             closePopup={this.handleClick}
           />
@@ -156,12 +154,6 @@ constructor() {
         }
         </div>
         )
-    }
-    {      
-      console.log(this.state.triesCounter)
-    }
-    {      
-      console.log(this.state.rightsCounter)
     }
     if (this.refs.facit && (this.state.selected === this.refs.facit.textContent)) {
       return (

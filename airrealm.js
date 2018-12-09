@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './realm.css';
 import UppgiftDiv from './uppgiftdiv.js';
