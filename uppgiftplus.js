@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import types from './types.json';
 /*import './uppgiftplus.css';*/
 import './uppgift.css';
+import './popup.css';
 import FireRealm from './firerealm.js';
 import PopUp from './popup.js';
 
@@ -47,7 +48,7 @@ constructor() {
   };
   RandomOp(svar, maxNumber) {
   	let plusminus = this.Random(2);
-  	if(plusminus == 1)
+  	if(plusminus === 1)
   		return (svar + this.Random(maxNumber))
   	else
   		return (svar - this.Random(maxNumber))
@@ -57,39 +58,46 @@ constructor() {
  	return true;
  }
   RandomUpg(max) {
-  	let term1 = this.Random(max);
-  	let term2 = this.Random(max);
-  	let svar = term1 + term2;
-  	let alt1 = this.RandomOp(svar, (max/10 + 5));
-  	let alt2 = this.RandomOp(svar, (max/10 + 5));
-  	let alt3 = this.RandomOp(svar, (max/10 + 5));
-  	let alt4 = this.RandomOp(svar, (max/10 + 5));
+  	let svar = 0;
+    let term1 = 0;
+    let term2 = 0;
+    let validate = false;
 
-  	while(alt1==alt2)
-  		alt1 = this.RandomOp(svar, (max/10 + 5));
-  	while(alt1==alt3)
-  		alt1 = this.RandomOp(svar, (max/10 + 5));
-  	while(alt1==alt4)
-  		alt1 = this.RandomOp(svar, (max/10 + 5));
-  	while(alt2==alt3)
-  		alt2 = this.RandomOp(svar, (max/10 + 5));
-  	while(alt2==alt4)
-  		alt2 = this.RandomOp(svar, (max/10 + 5));
-  	while(alt3==alt4)
-  		alt3 = this.RandomOp(svar, (max/10 + 5));
+    while(validate === false) {
+        term1 = this.Random(max);
+        term2 = this.Random(max);
+        svar = term1 + term2;
+        if (svar > 0) {
+          validate = true;
+        }
+    }
+
+    let alt1 = this.RandomOp(svar, (max/10 + 5));
+    let alt2 = this.RandomOp(svar, (max/10 + 5));
+    let alt3 = this.RandomOp(svar, (max/10 + 5));
+    let alt4 = this.RandomOp(svar, (max/10 + 5));
+
+    while(alt4 < 0)
+      alt4 = this.RandomOp(svar, (max/10 + 5));
+    while(alt3===alt4 || alt3<0)
+      alt3 = this.RandomOp(svar, (max/10 + 5));
+    while(alt2===alt4 || alt2===alt3 || alt2<0)
+      alt2 = this.RandomOp(svar, (max/10 + 5));
+    while(alt1===alt2 || alt1===alt3 || alt1===alt4 || alt1<0)
+      alt1 = this.RandomOp(svar, (max/10 + 5));
 
 
   	let svarPlace = this.Random(4);
-  	if(svarPlace == 1 ) {alt1 = svar;}
-  	else if(svarPlace == 2) {alt2 = svar;}
-  	else if(svarPlace == 3) {alt3 = svar;}
+  	if(svarPlace === 1 ) {alt1 = svar;}
+  	else if(svarPlace === 2) {alt2 = svar;}
+  	else if(svarPlace === 3) {alt3 = svar;}
   	else {alt4 = svar;}
   	let facit = "alt" + svarPlace;
   	
     return (
       <div id = "bakgrundsbildFire">
         <div id= "container">
-          <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
+          <button id = "abort" onClick={this.handleClick}> Tillbaka </button>
           <div id = "graphicsFireUpg"><div id ="uppgift"> {term1} + {term2}</div></div>
           <button id = "alt1" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt1}</button>
           <button id = "alt2" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt2}</button>
@@ -125,7 +133,7 @@ constructor() {
         }
         {this.state.showPopup ? 
           <PopUp
-            text='Öj det där är ju typ rätt'
+            text='Rätt svar, bra jobbat!'
             back={this.togglePopup}
             closePopup={this.togglePopup}
           />
@@ -156,7 +164,7 @@ constructor() {
         <div>
        {this.state.showPopup ? 
           <PopUp
-            text='Du har fel'
+            text='Det där var tyvärr fel svar'
             back={this.togglePopup}
             closePopup={this.togglePopup}
           /> : null

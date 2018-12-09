@@ -17,19 +17,23 @@ body {
 #bakgrundsbildFire{
 	background-image: url("eld-1.png");
   	background-size:  540px 960px;
+  	background-repeat: no-repeat;
 }
 
 #bakgrundsbildWater{
 	background-image: url("Hav-1.png");
   	background-size:  540px 960px;
+  	background-repeat: no-repeat;
 }
 #bakgrundsbildForest{
 	background-image: url("skog-1.png");
   	background-size:  540px 960px;
+  	background-repeat: no-repeat;
 }
 #bakgrundsbildAir{
-		background-image: url("luft-1.png");
+	background-image: url("luft-1.png");
   	background-size:  540px 960px;
+  	background-repeat: no-repeat;
 }
 /**************************************
 **ALLMÄN KOD FÖR UPPGIFTS-RUTORNA****

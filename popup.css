@@ -1,0 +1,37 @@
+/* POP UP*/
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0,0,0, 0.5);
+}
+.popup_inner {
+  position: absolute;
+  left: 10%;
+  right: 50%;
+  top: 40%;
+  bottom: 40%;
+  margin: auto;
+  background: white;
+  text-align: center;
+  /*fire*/
+  background-color: #D2706C;
+  font-family: Moon;
+  border: 1vw solid #575656;
+  border-radius: 3vw;
+}
+
+#next {
+  background-color:#F8B479;
+  font-family: Moon;
+  width: 10vw;
+  height: 5vw;
+  font-size: 3vw;
+  border: none;
+  border-radius: 2vw;
+}

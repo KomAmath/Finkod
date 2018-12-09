@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import types from './types.json';
+import './app.css';
 
 // https://codepen.io/bastianalbers/pen/PWBYvz
 
@@ -9,7 +10,8 @@ class Popup extends React.Component {
       <div className='popup'>
         <div className='popup_inner'>
           <h1>{this.props.text}</h1>
-        <button onClick={this.props.closePopup}>Next</button>
+          <button id='next' onClick={this.props.closePopup}>Next</button>
+          <div id="donald" onClick={this.handleClick}/>
         </div>
       </div>
     );

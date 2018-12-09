@@ -25,30 +25,25 @@ body {
 #header {
 
 	width: 100vw;
-	height: 20vw;
+	height: 25vw;
 }
 
-#donald {
-	height: 20vw;
-	float: left;
-	margin-left: 7vw;
-	margin-top: 3vw;
-}
+
 
 #abort {
-	width: 50px;
-	height: 50px;
+	width: 15vw;
+	height: 12vw;
 	float: left;
-	margin-left:10px;
+	margin-left:3vw;
 	background-color:#575656;
-	margin-top: 10px;
+	margin-top: 3vw;
 	position: fixed;
 	
 	border: none;
-	border-radius: 10px;
+	border-radius: 2vw;
 
 	font-family: Moon;
-	font-size: 10px;
+	font-size: 4vw;
 	color: white;
 }
 
@@ -143,12 +138,12 @@ body {
 #donald {
 	background-position: 1vw 1vw;
 	background-image: url('duckeliduck.png');
-	background-size: 15vw;
-	height: 20vw;
-	width: 20vw;
+	background-size: 19vw;
+	height: 25vw;
+	width: 25vw;
 	float: left;
-	margin-left: 4vw;
-	margin-top: 5vw;
+	margin-left: 10vw;
+	margin-top: 2vw;
 	background-repeat: no-repeat;
 }
 

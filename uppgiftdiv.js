@@ -34,7 +34,7 @@ constructor() {
   };
   RandomOp(svar, maxNumber) {
   	let plusminus = this.Random(2);
-  	if(plusminus == 1)
+  	if(plusminus === 1)
   		return (svar + this.Random(maxNumber))
   	else
   		return (svar - this.Random(maxNumber))
@@ -50,12 +50,12 @@ constructor() {
     let term2 = 0;
     let validate = false;
 
-    while(validate == false) {
+    while(validate === false) {
         term1 = this.Random(max);
         term2 = this.Random(max);
         svar = term1 / term2;
         let reminder = term1 % term2;
-        if (reminder == 0 && term1 != term2 && term2 != 1) {
+        if (reminder === 0 && term1 !== term2 && term2 !== 1) {
           validate = true;
         }
     }
@@ -68,18 +68,18 @@ constructor() {
 
     while(alt4 < 1)
       alt4 = this.RandomOp(svar, (max/10 + 5));
-    while(alt3==alt4 || alt3<1)
+    while(alt3===alt4 || alt3<1)
       alt3 = this.RandomOp(svar, (max/10 + 5));
-    while(alt2==alt4 || alt2==alt3 || alt2<1)
+    while(alt2===alt4 || alt2===alt3 || alt2<1)
       alt2 = this.RandomOp(svar, (max/10 + 5));
-    while(alt1==alt2 || alt1==alt3 || alt1==alt4 || alt1<1)
+    while(alt1===alt2 || alt1===alt3 || alt1===alt4 || alt1<1)
       alt1 = this.RandomOp(svar, (max/10 + 5));
 
 
   	let svarPlace = this.Random(4);
-  	if(svarPlace == 1 ) {alt1 = svar;}
-  	else if(svarPlace == 2) {alt2 = svar;}
-  	else if(svarPlace == 3) {alt3 = svar;}
+  	if(svarPlace === 1 ) {alt1 = svar;}
+  	else if(svarPlace === 2) {alt2 = svar;}
+  	else if(svarPlace === 3) {alt3 = svar;}
   	else {alt4 = svar;}
   	let facit = "alt" + svarPlace;
   		
