@@ -95,31 +95,20 @@ constructor() {
   	let facit = "alt" + svarPlace;
   	
     return (
-      <div id = "bakgrundsbildFire">
-        <div id= "container">
+      <div id= "container">
+        <div id = "bakgrundsbildFire">
           <button id = "abort" onClick={this.handleClick}> Tillbaka </button>
-          <div id = "graphicsFireUpg"><div id ="uppgift"> {term1} + {term2}</div></div>
+          <div id = "graphicsFireUpg"><div id = "uppgift"> {term1} + {term2}</div></div>
           <button id = "alt1" ref="alt1" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt1}</button>
           <button id = "alt2" ref="alt2" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt2}</button>
           <button id = "alt3" ref="alt3" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt3}</button>
           <button id = "alt4" ref="alt4" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt4}</button>
           <p hidden ref="facit">{facit}</p>
+          </div>
         </div>
-      </div>
       )
 
 
-  	/*return (
-  		<div id= "container">
-      <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
-    	<div id ="uppgift"> {term1} + {term2}</div>
-    	<button id = "alt1" className = "alternativ" onClick={this.handleClick}>{alt1}</button>
-    	<button id = "alt2" className = "alternativ" onClick={this.handleClick}>{alt1}</button>
-    	<button id = "alt3" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt3}</button>
-    	<button id = "alt4" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt4}</button>
-    	<p hidden ref="facit">{facit}</p>
-    	</div>
-    	);*/
   }
 
   render() {
@@ -219,3 +208,16 @@ export default UppgiftPlus;
   };
 
   */
+
+
+    /*return (
+      <div id= "container">
+      <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
+      <div id ="uppgift"> {term1} + {term2}</div>
+      <button id = "alt1" className = "alternativ" onClick={this.handleClick}>{alt1}</button>
+      <button id = "alt2" className = "alternativ" onClick={this.handleClick}>{alt1}</button>
+      <button id = "alt3" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt3}</button>
+      <button id = "alt4" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt4}</button>
+      <p hidden ref="facit">{facit}</p>
+      </div>
+      );*/

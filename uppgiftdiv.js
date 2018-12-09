@@ -3,6 +3,8 @@ import types from './types.json';
 import './uppgift.css';
 import AirRealm from './airrealm.js';
 import PopUp from './popup.js';
+import './popup.css';
+import './uppgift.css';
 
 class UppgiftDiv extends React.Component {
 constructor() {
@@ -12,14 +14,26 @@ constructor() {
       showPopup: null
     };
     this.handleClick = this.handleClick.bind(this);
-    this.togglePopup = this.togglePopup.bind(this)
+    this.togglePopup = this.togglePopup.bind(this);
   }
   handleClick(input) {
-    console.log(input.target.id);
-    this.setState({
-      selected: input.target.id,
-      showPopup: false
-    })
+      console.log("start");
+      console.log(input.target.id);
+      console.log(this.state.showPopup);
+      if(this.refs.facit) {
+          console.log(this.state.selected);
+          console.log(this.refs.facit.textContent);
+      }
+      //if (this.refs.facit && (this.state.selected === this.refs.facit.textContent)) {
+        console.log("toggle");
+       this.togglePopup();
+     //}
+      console.log(this.state.showPopup);
+      //console.log(this.state.showPopup);
+      this.setState({
+        selected: input.target.id
+        //showPopup: false
+      })
   };
 
   togglePopup() {
@@ -86,12 +100,12 @@ constructor() {
 return (
       <div id = "bakgrundsbildAir">
         <div id= "container">
-          <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
+          <button id = "abort" onClick={this.handleClick}> Tillbaka </button>
           <div id = "graphicsAirUpg"><div id ="uppgift"> {term1} / {term2}</div></div>
-          <button id = "alt1" className = "graphicsAirAlt" onClick={(event) => {this.handleClick(event);}}>{alt1}</button>
-          <button id = "alt2" className = "graphicsAirAlt" onClick={(event) => {this.handleClick(event);}}>{alt2}</button>
-          <button id = "alt3" className = "graphicsAirAlt" onClick={(event) => {this.handleClick(event);}}>{alt3}</button>
-          <button id = "alt4" className = "graphicsAirAlt" onClick={(event) => {this.handleClick(event);}}>{alt4}</button>
+          <button id = "alt1" ref = "alt1" className = "graphicsAirAlt" onClick={(event) => {this.handleClick(event);}}>{alt1}</button>
+          <button id = "alt2" ref = "alt2" className = "graphicsAirAlt" onClick={(event) => {this.handleClick(event);}}>{alt2}</button>
+          <button id = "alt3" ref = "alt3" className = "graphicsAirAlt" onClick={(event) => {this.handleClick(event);}}>{alt3}</button>
+          <button id = "alt4" ref = "alt4" className = "graphicsAirAlt" onClick={(event) => {this.handleClick(event);}}>{alt4}</button>
           <p hidden ref="facit">{facit}</p>
         </div>
       </div>
@@ -110,20 +124,72 @@ return (
     	);*/
   }
 
-  render() {
+   render() {
     const test = <AirRealm />;
+    console.log(this.state.showPopup)
     if (this.refs.facit && (this.state.selected === this.refs.facit.textContent)) {
       return (
-        test
-        ); 
-    }
+        <div>
+        {
+          console.log(this.state.showPopup)
+        }
+        {this.state.showPopup ? 
+          <PopUp
+            text='Rätt svar, bra jobbat!'
+            back={this.togglePopup}
+            closePopup={this.togglePopup}
+          />
+          : null
+
+        }
+        {
+          console.log(this.state.showPopup)
+        }
+        {
+          console.log(this.state.selected)
+        }
+        {
+          console.log(this.refs.facit.textContent)
+        }
+        {
+          
+          this.RandomUpg(20)
+        }
+        </div>
+        );
+      }
     else if (this.state.selected === "abort") {
       return (test);
     }
-  	
+    else if (this.refs.facit && ((this.state.selected !== this.refs.facit.textContent))){
+      let rightanswer = "";
+      if(this.refs.facit.textContent === "alt1"){
+        rightanswer = this.refs.alt1.textContent;
+      } else if(this.refs.facit.textContent === "alt2") {
+        rightanswer = this.refs.alt2.textContent;
+      } else if(this.refs.facit.textContent === "alt3") {
+        rightanswer = this.refs.alt3.textContent;
+      } else {
+        rightanswer = this.refs.alt4.textContent;
+      }
+        return(
+        <div>
+       {this.state.showPopup ? 
+          <PopUp
+            text={'Fel svar. Rätt svar är ' + rightanswer}
+            back={this.togglePopup}
+            closePopup={this.togglePopup}
+          /> : null
+        }
+        {
+          
+          this.RandomUpg(20)
+        }
+      </div>
+        ); 
+    }
     return (
       this.RandomUpg(20)
-    	
       );
   }
 }

@@ -3,76 +3,121 @@ body {
 	/*background-image: url("eld.png");*/
 	/*background-size:cover;*/ /*DET VAR DENNA JÄVEL SOM SABBADE!!*/
 	 /*height och width gör inte ett skit atm*/
-	 background-color: white;
+	 
 }
 
 /*Innehåller alla stora knappar på sidan (svar och alternativ)*/
 
 
 #container {
-	height: 960px;
-	width: 540px;
+	height: 200vw;
+	width: 100vw;
 }
 
 #bakgrundsbildFire{
 	background-image: url("eld-1.png");
-  	background-size:  540px 960px;
+	height: 180vw;
+	margin-top: 0vw;
+  	background-size: cover;
   	background-repeat: no-repeat;
 }
 
 #bakgrundsbildWater{
 	background-image: url("Hav-1.png");
-  	background-size:  540px 960px;
+  	height: 180vw;
+	margin-top: 0vw;
+  	background-size: cover;
   	background-repeat: no-repeat;
 }
 #bakgrundsbildForest{
 	background-image: url("skog-1.png");
-  	background-size:  540px 960px;
+  	height: 180vw;
+	margin-top: 0vw;
+  	background-size: cover;
   	background-repeat: no-repeat;
 }
 #bakgrundsbildAir{
 	background-image: url("luft-1.png");
-  	background-size:  540px 960px;
+  	height: 180vw;
+	margin-top: 0vw;
+  	background-size: cover;
   	background-repeat: no-repeat;
 }
 /**************************************
 **ALLMÄN KOD FÖR UPPGIFTS-RUTORNA****
 **************************************/
 #uppgift {
+	margin-top: 10vw;
 	
-	border-radius: 1px;
+}
+
+/*
+border-radius: 3vw;
 	font-family: Moon; 
 	color:#575656;
 	text-align : center;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	font-size: 50px;
-	width: 400px;
-	height: 200px;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	font-size: 3vw;
+	width: 30vw;
+	height: 20vw;
 	margin: auto;
-}
-
+*/
 /**************************************
 **LOKALA FÄRG/BAKGRUNDSINSTÄLLNINGAR***
 **************************************/
 #graphicsFireUpg{
+	border-radius: 3vw;
+	font-family: Moon; 
+	text-align : center;
+	padding-bottom: 5vw;
+	font-size: 15vw;
+	width: 70vw;
+	height: 30vw;
+	margin: auto;
+	color:#575656;
 	background-color: #D2706C;
-	border: 5px solid #575656;
+	border: 1vw solid #575656;
+	
 }
 #graphicsWaterUpg{
+	border-radius: 3vw;
+	font-family: Moon; 
+	text-align : center;
+	padding-bottom: 5vw;
+	font-size: 15vw;
+	width: 70vw;
+	height: 30vw;
+	margin: auto;
 	background-color: #1f7da7;
-	border: 0.5vw solid #575656;
-		color:#575656;
+	border: 1vw solid #575656;
+	color:#575656;
 }
 #graphicsForestUpg{
-	background-color: #104218;
-	border: 0.5vw solid #575656;
-		color:#ffff;
+	border-radius: 3vw;
+	font-family: Moon; 
+	text-align : center;
+	padding-bottom: 5vw;
+	font-size: 15vw;
+	width: 70vw;
+	height: 30vw;
+	margin: auto;
+	background-color: #379650;
+	border: 1vw solid #575656;
+	color:#575656;
 }
 #graphicsAirUpg{
-background-color: #f37d3f;
-	border: 0.5vw solid #575656;
-		color:#575656;
+	border-radius: 3vw;
+	font-family: Moon; 
+	text-align : center;
+	padding-bottom: 5vw;
+	font-size: 15vw;
+	width: 70vw;
+	height: 30vw;
+	margin: auto;
+	background-color: #f37d3f;
+	border: 1vw solid #575656;
+	color:#575656;
 }
 
 /**************************************
@@ -96,71 +141,83 @@ background-color: #f37d3f;
 .graphicsFireAlt{
 	background-color: #F8B479;
 	color:#575656;
-	border: 0.5px solid #575656;
-
-	width : 200px;
-	height: 100px;
+	border: 1vw solid #575656;
+	width : 35vw;
+	height: 25vw;
 	text-align: center;
-	border-radius: 1px;
-	font-size: 50px;
+	border-radius: 3vw;
+	font-size: 10vw;
 	font-family: Moon;
-	margin-top: 50px;
+	margin-top: 15vw;
+
+}
+.graphicsFireAlt:active {
+  opacity: 0.8;
 }
 .graphicsWaterAlt{
 	background-color: #6ecced;
 	color:#575656;
-	border: 0.5vw solid #575656;
-
-	width : 28vw;
-	height: 15vw;
-	margin-top: 2vw;
-
+	border: 1vw solid #575656;
+	width : 35vw;
+	height: 25vw;
 	text-align: center;
-	border-radius: 1vw;
-	font-size: 7vw;
+	border-radius: 3vw;
+	font-size: 10vw;
 	font-family: Moon;
+	margin-top: 15vw;
 }
+
+.graphicsWaterAlt:active {
+  opacity: 0.8;
+}
+
 .graphicsForestAlt{
 	background-color: #76c060;
 	color:#575656;
-	border: 0.5vw solid #575656;
+	border: 1vw solid #575656;
 
-	width : 28vw;
-	height: 15vw;
-	margin-top: 2vw;
+	width : 35vw;
+	height: 25vw;
 	text-align: center;
-	border-radius: 1vw;
-	font-size: 7vw;
+	border-radius: 3vw;
+	font-size: 10vw;
 	font-family: Moon;
+	margin-top: 15vw;
 }
+.graphicsForestAlt:active {
+  opacity: 0.8;
+}
+
 .graphicsAirAlt{
 	background-color: #fdc578;
 	color:#575656;
-	border: 0.5vw solid #575656;
-
-	width : 28vw;
-	height: 15vw;
-	margin-top: 2vw;
+	border: 1vw solid #575656;
+	width : 35vw;
+	height: 25vw;
 	text-align: center;
-	border-radius: 1vw;
-	font-size: 7vw;
+	border-radius: 3vw;
+	font-size: 10vw;
 	font-family: Moon;
+	margin-top: 15vw;
 }
 
+.graphicsAirAlt:active {
+  opacity: 0.8;
+}
 
 #alt1{
 	float: left;
-	margin-left: 20px;
+	margin-left: 10vw;
 }
 #alt2{
 	float: right;
-	margin-right: 20px;
+	margin-right: 10vw;
 }
 #alt3{
 	float: left;
-	margin-left: 20px;
+	margin-left: 10vw;
 }
 #alt4{
 	float: right;
-	margin-right: 20px;
+	margin-right: 10vw;
 }

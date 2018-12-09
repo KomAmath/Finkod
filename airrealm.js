@@ -29,6 +29,18 @@ import App from './app.js';
     if (this.state.selected === "ett") {
       return uppgiftdiv;
     }
+    if (this.state.selected === "tva") {
+      return uppgiftdiv;
+    }
+    if (this.state.selected === "tre") {
+      return uppgiftdiv;
+    }
+    if (this.state.selected === "fyra") {
+      return uppgiftdiv;
+    }
+    if (this.state.selected === "fem") {
+      return uppgiftdiv;
+    }
     if (this.state.selected === "abort") {
       return app;
     }
@@ -38,9 +50,9 @@ import App from './app.js';
 
        <div className="air">
 
-       <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
+       <button id = "abort" onClick={this.handleClick}> Tillbaka </button>
         <div id="knappContainer">
-          <div className="flex-container">
+          {/*<div className="flex-container">
           <button type="button" className="luftknapp"> 9</button>
           <div className="empty_half"></div>       
           </div>
@@ -58,27 +70,27 @@ import App from './app.js';
           <div className="flex-container3">
           <div className="empty"></div>
           <button type="button" className="luftknapp"> 6 </button>
-          </div>
+          </div>*/}
 
           <div className="flex-container3">
           <div className="empty"></div>
           <div className="empty_half"></div>
-          <button type="button" className="luftknapp"> 5 </button>
+          <button id='fem' type="button" className="luftknapp" onClick={this.handleClick}> 5 </button>
           </div>
 
           <div className="flex-container">
           <div className="empty"></div>
-          <button type="button" className="luftknapp"> 4</button>
+          <button id='fyra' type="button" className="luftknapp" onClick={this.handleClick}> 4</button>
           </div>
 
           <div className="flex-container2">
-          <button type="button" className="luftknapp"> 3 </button>
+          <button id='tre' type="button" className="luftknapp" onClick={this.handleClick}> 3 </button>
           <div className="empty"></div>
           </div>
 
           <div className="flex-container">
           <div className="empty_half"></div>
-          <button type="button" className="luftknapp"> 2</button>
+          <button id='tva' type="button" className="luftknapp" onClick={this.handleClick}> 2</button>
           </div>
 
           <div className="flex-container3">

@@ -8,8 +8,7 @@ body {
 .wrapper {
 	/*Halverad storlek, ändra senare*/
 
-	height:200vw;
-	width: 100vw;
+	height:180vw;
 	background-color: #fffde0;
 	font-family: Moon;
 	background-image: url("bakgrund_gryning.png");
@@ -40,11 +39,15 @@ body {
 	position: fixed;
 	
 	border: none;
-	border-radius: 2vw;
+	border-radius: 3vw;
 
 	font-family: Moon;
 	font-size: 4vw;
 	color: white;
+}
+
+#abort:active {
+	background-color: #898989;
 }
 
 #arrowLeft { /*jag hittar inte pilen mvh ceki, eller hör den bara ihop med bubble?*/
@@ -68,7 +71,7 @@ body {
 /*välkomstexten, bubblan ändrar storlek enligt hur stor fonten är*/
 #welcome {
 	color:white;
-	opacity: 0.7;
+	opacity: 0.9;
 	font-size: 7vw;
 	text-align: center;
 }

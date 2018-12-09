@@ -61,7 +61,7 @@ class TypeApp extends React.Component {
            <div id="donald" onClick={this.handleClick}/>
             <div id="arrowLeft"></div>
             <div id="bubble">
-              <p id="welcome"> Välkommen hit! </p>
+              <p id="welcome"> Välkommen! </p>
             </div>
         </div>
         <div id="knappar">

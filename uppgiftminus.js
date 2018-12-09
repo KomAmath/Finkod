@@ -12,14 +12,26 @@ constructor() {
       showPopup: null
     };
     this.handleClick = this.handleClick.bind(this);
-    this.togglePopup = this.togglePopup.bind(this)
+    this.togglePopup = this.togglePopup.bind(this);
   }
   handleClick(input) {
-    console.log(input.target.id);
-    this.setState({
-      selected: input.target.id,
-      showPopup: false
-    })
+      console.log("start");
+      console.log(input.target.id);
+      console.log(this.state.showPopup);
+      if(this.refs.facit) {
+          console.log(this.state.selected);
+          console.log(this.refs.facit.textContent);
+      }
+      //if (this.refs.facit && (this.state.selected === this.refs.facit.textContent)) {
+        console.log("toggle");
+       this.togglePopup();
+     //}
+      console.log(this.state.showPopup);
+      //console.log(this.state.showPopup);
+      this.setState({
+        selected: input.target.id
+        //showPopup: false
+      })
   };
 
   togglePopup() {
@@ -85,48 +97,89 @@ constructor() {
     return (
         <div id = "bakgrundsbildWater">
           <div id= "container">
-            <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
+            <button id = "abort" onClick={this.handleClick}> Tillbaka </button>
             <div id = "graphicsWaterUpg"><div id ="uppgift"> {term1} - {term2}</div></div>
-            <button id = "alt1" className = "graphicsWaterAlt" onClick={(event) => {this.handleClick(event);}}>{alt1}</button>
-            <button id = "alt2" className = "graphicsWaterAlt" onClick={(event) => {this.handleClick(event);}}>{alt2}</button>
-            <button id = "alt3" className = "graphicsWaterAlt" onClick={(event) => {this.handleClick(event);}}>{alt3}</button>
-            <button id = "alt4" className = "graphicsWaterAlt" onClick={(event) => {this.handleClick(event);}}>{alt4}</button>
+            <button id = "alt1" ref="alt1" className = "graphicsWaterAlt" onClick={(event) => {this.handleClick(event);}}>{alt1}</button>
+            <button id = "alt2" ref="alt2" className = "graphicsWaterAlt" onClick={(event) => {this.handleClick(event);}}>{alt2}</button>
+            <button id = "alt3" ref="alt3" className = "graphicsWaterAlt" onClick={(event) => {this.handleClick(event);}}>{alt3}</button>
+            <button id = "alt4" ref="alt4" className = "graphicsWaterAlt" onClick={(event) => {this.handleClick(event);}}>{alt4}</button>
             <p hidden ref="facit">{facit}</p>
           </div>
         </div>
         )
 
-    /*return (
-  		<div id= "vattenwrap">
-      <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
-    	<div id ="uppgift"> {term1} - {term2}</div>
-    	<button id = "alt1" className = "alternativ" onClick={this.handleClick}>{alt1}</button>
-    	<button id = "alt2" className = "alternativ" onClick={() => { this.handleClick(); this.togglePopup() }}>{alt2}</button>
-    	<button id = "alt3" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt3}</button>
-    	<button id = "alt4" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt4}</button>
-    	<p hidden ref="facit">{facit}</p>
-    	</div>
-    	);*/
+
   }
 
   render() {
     const test = <WaterRealm />;
+    console.log(this.state.showPopup)
     if (this.refs.facit && (this.state.selected === this.refs.facit.textContent)) {
       return (
-        test
-        ); 
-    }
+        <div>
+        {
+          console.log(this.state.showPopup)
+        }
+        {this.state.showPopup ? 
+          <PopUp
+            text='Rätt svar, bra jobbat!'
+            back={this.togglePopup}
+            closePopup={this.togglePopup}
+          />
+          : null
+
+        }
+        {
+          console.log(this.state.showPopup)
+        }
+        {
+          console.log(this.state.selected)
+        }
+        {
+          console.log(this.refs.facit.textContent)
+        }
+        {
+          
+          this.RandomUpg(20)
+        }
+        </div>
+        );
+      }
     else if (this.state.selected === "abort") {
       return (test);
     }
-  	
+    else if (this.refs.facit && ((this.state.selected !== this.refs.facit.textContent))){
+      let rightanswer = "";
+      if(this.refs.facit.textContent === "alt1"){
+        rightanswer = this.refs.alt1.textContent;
+      } else if(this.refs.facit.textContent === "alt2") {
+        rightanswer = this.refs.alt2.textContent;
+      } else if(this.refs.facit.textContent === "alt3") {
+        rightanswer = this.refs.alt3.textContent;
+      } else {
+        rightanswer = this.refs.alt4.textContent;
+      }
+        return(
+        <div>
+       {this.state.showPopup ? 
+          <PopUp
+            text={'Fel svar. Rätt svar är ' + rightanswer}
+            back={this.togglePopup}
+            closePopup={this.togglePopup}
+          /> : null
+        }
+        {
+          
+          this.RandomUpg(20)
+        }
+      </div>
+        ); 
+    }
     return (
-      this.RandomUpg(30)
-    	
+      this.RandomUpg(20)
       );
   }
 }
-
 
 UppgiftMinus.types = {
 	//uppgiftTyp 
@@ -134,3 +187,16 @@ UppgiftMinus.types = {
 }
 
 export default UppgiftMinus;
+
+
+    /*return (
+      <div id= "vattenwrap">
+      <button id = "abort" onClick={this.handleClick}> Abort Mission </button>
+      <div id ="uppgift"> {term1} - {term2}</div>
+      <button id = "alt1" className = "alternativ" onClick={this.handleClick}>{alt1}</button>
+      <button id = "alt2" className = "alternativ" onClick={() => { this.handleClick(); this.togglePopup() }}>{alt2}</button>
+      <button id = "alt3" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt3}</button>
+      <button id = "alt4" className = "alternativ" onClick={function(event){this.handleClick(); this.togglePopup()}}>{alt4}</button>
+      <p hidden ref="facit">{facit}</p>
+      </div>
+      );*/
