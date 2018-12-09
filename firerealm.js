@@ -96,7 +96,6 @@ import App from './app.js';
                 <div className="empty"></div>
                 <button id='ett' type="button" className="eldknapp" onClick={this.handleClick}> 1 </button>
             </div>
-
        </div>
       )
   }

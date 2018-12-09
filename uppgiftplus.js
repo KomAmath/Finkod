@@ -99,10 +99,10 @@ constructor() {
         <div id= "container">
           <button id = "abort" onClick={this.handleClick}> Tillbaka </button>
           <div id = "graphicsFireUpg"><div id ="uppgift"> {term1} + {term2}</div></div>
-          <button id = "alt1" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt1}</button>
-          <button id = "alt2" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt2}</button>
-          <button id = "alt3" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt3}</button>
-          <button id = "alt4" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt4}</button>
+          <button id = "alt1" ref="alt1" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt1}</button>
+          <button id = "alt2" ref="alt2" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt2}</button>
+          <button id = "alt3" ref="alt3" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt3}</button>
+          <button id = "alt4" ref="alt4" className = "graphicsFireAlt" onClick={(event) => {this.handleClick(event);}}>{alt4}</button>
           <p hidden ref="facit">{facit}</p>
         </div>
       </div>
@@ -160,11 +160,21 @@ constructor() {
       return (test);
     }
     else if (this.refs.facit && ((this.state.selected !== this.refs.facit.textContent))){
+      let rightanswer = "";
+      if(this.refs.facit.textContent === "alt1"){
+        rightanswer = this.refs.alt1.textContent;
+      } else if(this.refs.facit.textContent === "alt2") {
+        rightanswer = this.refs.alt2.textContent;
+      } else if(this.refs.facit.textContent === "alt3") {
+        rightanswer = this.refs.alt3.textContent;
+      } else {
+        rightanswer = this.refs.alt4.textContent;
+      }
         return(
         <div>
        {this.state.showPopup ? 
           <PopUp
-            text='Det där var tyvärr fel svar'
+            text={'Fel svar. Rätt svar är ' + rightanswer}
             back={this.togglePopup}
             closePopup={this.togglePopup}
           /> : null

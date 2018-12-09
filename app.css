@@ -104,36 +104,39 @@ body {
 
 #plus {
 	float: left;
-	margin-left: 30px;
-	margin-top: 30px;
+	/*margin-left: 30px;
+	margin-top: 30px;*/
 	background-image: url("eld-1.png");
 	background-size:cover;
 }
 
 #minus {
 	float: right;
-	margin-right: 30px;
-	margin-top: 30px;
+	margin-right: 10vw;
+	/*margin-top: 30px;*/
 	background-image: url("Hav-1.png");
 	background-size:cover;
 }
 
 #mult {
 	float: left;
-	margin-left: 30px;
-	margin-top: 30px;
+
+	/*margin-left: 30px;
+	margin-top: 30px;*/
+
 	background-image: url("skog-1.png");
 	background-size:cover;
 }
 
 #division {
 	float: right;
-	margin-right: 30px;
-	margin-top: 30px;
+
+	margin-right: 10vw;
+	/*margin-top: 30px;*/
+
 	background-image: url("luft-1.png");
 	background-size:cover;
 }
-
 
 #donald {
 	background-position: 1vw 1vw;
@@ -146,4 +149,5 @@ body {
 	margin-top: 2vw;
 	background-repeat: no-repeat;
 }
+
 

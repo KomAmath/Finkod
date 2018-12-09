@@ -1,19 +1,20 @@
 
+ #knappContainer{
+
+ }
+
+
 /*Tom div för att flytta knapp*/
 .empty {
-    height: 20px;
-  	width: 20px;
+    height: 4vw;
+  	width: 4vw;
   	border-radius: 50%;
-  	font-size: 3px;
-  	opacity: 0;
 }
 /*Tom div för att flytta knapp halvt steg*/
 .empty_half {
-    height: 10px;
-  	width: 10px;
+    height: 2vw;
+  	width: 2vw;
   	border-radius: 50%;
-  	font-size: 3px;
-  	opacity: 0;
 }
 /*Övre rad med div:ar*/
 .flex-container {
@@ -40,55 +41,45 @@ button:focus {outline:0;}
 /********* Fire realm CSS *********/
 
 .fire {
-
   background-image: url("eld-1.png");
-
-
-  background-size: cover;
+  background-size: 100vw;
 }
+
 .eldknapp{
   background: transparent;
   background-image: url("eldlvl.png"); 
-  background-size: 20vw 25vw;
+  background-size: 15vw 19.7vw;
   background-position: center;
   display: inline-block;
   border: none;
-  width: 20vw;
+  width: 15vw;
+  height: 19.7vw;
   border-radius: 10px;
-  height: 25vw;
+
+
   transition: all 0.5s;
   font-family: Moon;
   font-size:50px;
   color: #4f4b4d; /*font-color*/
-  padding-top: 4vw;
-  
-  /*border: 2px solid #575656;
-  border-radius: 50%;
-  transition: width 0.5s;
-*/
+  padding-top: 11vw;
 }
-/*
-.eldknapp:active{
-  background-color: #f46a46;
-  width: 25px;
-}
-*/
 
 /********* Water realm CSS *********/
 .water {
   background-image: url("Hav-1.png");
-  background-size:  540px 960px;
+  background-size: 100vw;
 }
 .vattenknapp{
   background: transparent;
   background-image: url("havlevel.png"); 
-  background-size: 20vw 20vw;
+  background-size: 20vw 19.7vw;
+
   background-position: center;
   display: inline-block;
   border: none;
   width: 20vw;
   border-radius: 10px;
-  height: 20vw;
+  height: 19.7vw;
   transition: all 0.5s;
   font-family: Moon;
   font-size:50px;
@@ -99,19 +90,21 @@ button:focus {outline:0;}
 /********* Forest realm CSS *********/
 .forest {
   background-image: url("skog-1.png");
-  background-size:  540px 960px;
+  background-size:  100vw;
+
 }
 
 .skogsknapp{
   background: transparent;
   background-image: url("skoglevel.png"); 
-  background-size: 22vw 25vw;
+  background-size: 18vw 19.7vw;
   background-position: center;
   display: inline-block;
   border: none;
-  width: 22vw;
+  width: 18vw;
   border-radius: 10px;
-  height: 25vw;
+  height: 19.7vw;
+
   transition: all 0.5s;
   font-family: Moon;
   font-size:50px;
@@ -121,22 +114,23 @@ button:focus {outline:0;}
 /********* Sky realm CSS *********/
 .air {
   background-image: url("luft-1.png");
-  background-size:  540px 960px;
+  background-size: 100vw;
 }
 
 .luftknapp{
   background: transparent;
   background-image: url("luftlevel.png"); 
-  background-size: 20vw 25vw;
+  background-size: 15vw 19.7vw;
   background-position: center;
   display: inline-block;
   border: none;
-  width: 20vw;
+  width: 15vw;
   border-radius: 10px;
-  height: 25vw;
+  height: 19.7vw;
   transition: all 0.5s;
   font-family: Moon;
   font-size:50px;
   color: #4f4b4d; /*font-color*/
   padding-bottom: 6vw;
 }
+
