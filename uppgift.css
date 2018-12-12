@@ -10,13 +10,13 @@ body {
 
 
 #container {
-	height: 200vw;
+	height: 180vw;
 	width: 100vw;
 }
 
 #bakgrundsbildFire{
 	background-image: url("eld-1.png");
-	height: 180vw;
+	height: 100%;
 	margin-top: 0vw;
   	background-size: cover;
   	background-repeat: no-repeat;
@@ -24,21 +24,21 @@ body {
 
 #bakgrundsbildWater{
 	background-image: url("Hav-1.png");
-  	height: 180vw;
+  	height: 100%;
 	margin-top: 0vw;
   	background-size: cover;
   	background-repeat: no-repeat;
 }
 #bakgrundsbildForest{
-	background-image: url("skog-1.png");
-  	height: 180vw;
+	background-image: url("skog.svg");
+  	height: 100%;
 	margin-top: 0vw;
   	background-size: cover;
   	background-repeat: no-repeat;
 }
 #bakgrundsbildAir{
-	background-image: url("luft-1.png");
-  	height: 180vw;
+	background-image: url("luft.svg");
+  	height: 100%;
 	margin-top: 0vw;
   	background-size: cover;
   	background-repeat: no-repeat;

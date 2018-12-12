@@ -50,13 +50,13 @@ button:focus {outline:0;}
 
 .eldknapp{
   background: transparent;
-  background-image: url("EldknappV1-01.png"); 
-  background-size: 30vw 25vw;
+  background-image: url("eldknapp.svg"); 
+  background-size: 36vw 31vw;
   background-position: center;
   display: inline-block;
   border: none;
-  width: 30vw;
-  height: 25vw;
+  width: 36vw;
+  height: 31vw;
   border-radius: 3vw;
   font-family: Moon;
   font-size:10vw;
@@ -78,14 +78,14 @@ button:focus {outline:0;}
 }
 .vattenknapp{
   background: transparent;
-  background-image: url("havlevel.png"); 
-  background-size: 24vw 22vw;
+  background-image: url("vattenknapp.svg"); 
+  background-size: 27vw 25vw;
   background-position: center;
   display: inline-block;
   border: none;
-  width: 24vw;
+  width: 27vw;
   border-radius: 3vw;
-  height: 22vw;
+  height: 25vw;
   font-family: Moon;
   font-size:10vw;
   color: #4f4b4d; /*font-color*/
@@ -99,7 +99,7 @@ button:focus {outline:0;}
 
 /********* Forest realm CSS *********/
 .forest {
-  background-image: url("skog-1.png");
+  background-image: url("skog.svg");
   height: 180vw;
   margin-top: 0vw;
   background-size: cover;
@@ -109,14 +109,14 @@ button:focus {outline:0;}
 
 .skogsknapp{
   background: transparent;
-  background-image: url("skogknappV1-01.png"); 
-  background-size: 22vw 27vw;
+  background-image: url("skogknapp.svg"); 
+  background-size: 26vw 31vw;
   background-position: center;
   display: inline-block;
   border: none;
-  width: 22vw;
+  width: 26vw;
   border-radius: 3vw;
-  height: 27vw;
+  height: 31vw;
   font-family: Moon;
   font-size: 10vw;
   color: #4f4b4d; /*font-color*/
@@ -128,7 +128,7 @@ button:focus {outline:0;}
 
 /********* Sky realm CSS *********/
 .air {
-  background-image: url("luft-1.png");
+  background-image: url("luft.svg");
   height: 180vw;
   margin-top: 0vw;
   background-size: cover;
@@ -137,14 +137,14 @@ button:focus {outline:0;}
 
 .luftknapp{
   background: transparent;
-  background-image: url("luftknappV1-01.png"); 
-  background-size: 22vw 26vw;
+  background-image: url("luftknapp.svg"); 
+  background-size: 26vw 31vw;
   background-position: center;
   display: inline-block;
   border: none;
-  width: 22vw;
+  width: 26vw;
   border-radius: 3vw;
-  height: 26vw;
+  height: 31vw;
   font-family: Moon;
   font-size:10vw;
   color: #4f4b4d; /*font-color*/

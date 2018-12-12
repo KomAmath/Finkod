@@ -8,7 +8,7 @@ class Popup extends React.Component {
   render() {
     return (
       <div className='popup'>
-        <div className='popup_inner'>
+        <div className={'popup_inner ' + this.props.korrekthet}>
           <h1>{this.props.text}</h1>
           <button id='next' onClick={this.props.closePopup}>Nästa</button>
           <div id='duck' onClick={this.handleClick}/>

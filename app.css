@@ -5,8 +5,7 @@ body {
 
 .wrapper {
 	/*Halverad storlek, ändra senare*/
-
-	height:180vw;
+	height:200vw;
 	background-color: #fffde0;
 	font-family: Moon;
 	background-image: url("bakgrund_gryning.png");
@@ -20,12 +19,9 @@ body {
 }
 
 #header {
-
 	width: 100vw;
 	height: 25vw;
 }
-
-
 
 #abort {
 	width: 15vw;
@@ -40,8 +36,9 @@ body {
 	border-radius: 3vw;
 
 	font-family: Moon;
-	font-size: 4vw;
+	font-size: 3.5vw;
 	color: white;
+	z-index: 1;
 }
 
 #abort:active {
@@ -52,25 +49,27 @@ body {
 	
 	border-top: 2vw solid transparent;
 	border-bottom: 3vw solid transparent; 
-	border-right:5vw solid #159ab2; 
+	border-right:5vw solid white;
+	opacity: 0.8; 
 	float: left;
 	margin-top: 7vw;
 }
 
 #bubble {
-	background-color: #159ab2;
+	background-color: white;
+	opacity: 0.8;
 	float:left;
 	border-radius: 3vw;;
 	padding-right: 6vw;
 	padding-left: 6vw;
 	margin-top: 3vw;
+
 }
 
 /*välkomstexten, bubblan ändrar storlek enligt hur stor fonten är*/
 #welcome {
-	color:white;
-	opacity: 0.9;
-	font-size: 7vw;
+	color:#575656;
+	font-size: 8.5vw;
 	text-align: center;
 }
 /*SJUKT OKLAR TEXT. GÖR INGET VID ÄNDRING*/
@@ -181,10 +180,14 @@ body {
 	background-color: white;
 	opacity: 0.8;
 	float: right;
+	font-size: 4.5vw;
 	border-radius: 3vw;;
 	padding-right: 6vw;
 	padding-left: 6vw;
 	margin-top: 18vw;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	color:#575656;
 }
 
 #arrowDown {

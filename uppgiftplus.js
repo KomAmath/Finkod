@@ -143,6 +143,7 @@ constructor() {
         { 
           <PopUp
             text={'Bra jobbat! Resultat: ' + this.state.rightsCounter + ' av ' + this.state.triesCounter}
+            korrekthet = 'result'
             back={this.togglePopup}
             closePopup={this.handleClick}
           />
@@ -161,6 +162,7 @@ constructor() {
         {this.state.showPopup ? 
           <PopUp
             text='Rätt svar, bra jobbat!'
+            korrekthet = 'right'
             back={this.togglePopup}
             closePopup={this.togglePopup}
           />
@@ -192,6 +194,7 @@ constructor() {
        {this.state.showPopup ? 
           <PopUp
             text={'Fel svar. Rätt svar är ' + rightanswer}
+            korrekthet = 'wrong'
             back={this.togglePopup}
             closePopup={this.togglePopup}
           /> : null

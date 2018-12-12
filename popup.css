@@ -12,16 +12,16 @@
 }
 .popup_inner {
   position: fixed;
-  width: 35vw;
-  height: 20vw;
+  width: 44vw;
+  height: 30vw;
   margin: auto;
-  margin-top: 50vw;
-  margin-left: 30vw;
+  margin-top: 18vw;
+  margin-left: 25.5vw;
   background: white;
   text-align: center;
-  font-size: 2vw;
+  font-size: 3vw;
   /*fire*/
-  background-color: #96B275;
+
   font-family: Moon;
   border: 1vw solid #575656;
   border-radius: 3vw;
@@ -29,13 +29,22 @@
   padding-right: 2vw;
   padding-left: 2vw;
 }
+.right {
+    background-color: #96B275;
+}
+.wrong {
+  background-color: #c05e5b;
+}
+.result {
+  background-color: #fad17f;
+}
 
 #next {
   background-color:#FBE9C6;
   font-family: Moon;
-  width: 10vw;
-  height: 5vw;
-  font-size: 3vw;
+  width: 18vw;
+  height: 8vw;
+  font-size: 5vw;
   margin-right: 0.1vw;
   border: none;
   border-radius: 2vw;
@@ -45,11 +54,11 @@
 #duck {
   background-position: 1vw 1vw;
   background-image: url('duckeliduck.png');
-  background-size: 19vw;
-  height: 25vw;
-  width: 25vw;
+  background-size: 24vw;
+  height: 30vw;
+  width: 30vw;
   float: left;
-  margin-top: 2vw;
+  margin-top: 3vw;
   background-repeat: no-repeat;
   padding-top: 3vw;
 
